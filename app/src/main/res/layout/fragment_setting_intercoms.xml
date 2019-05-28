@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置-对讲通话 -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tl_intercom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/set_intercomFragment_paddingleft"
+    android:paddingRight="@dimen/set_intercomFragment_paddingright"
+    android:paddingTop="@dimen/set_intercomFragment_paddingtop"
+    android:stretchColumns="1">
+
+    <TableRow
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/tv_highpriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_highpriority"
+            android:textColor="@color/contact_title_selected"
+            android:visibility="visible"
+            android:textSize="@dimen/textsize_settingActivity" />
+
+        <TextView
+            android:id="@+id/tv_highpriorityvl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_textview_style"
+            android:drawableLeft="@drawable/setting_textspace"
+            android:drawableRight="@drawable/setting_dropdown"
+            android:gravity="left|center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_settingActivity" />
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/tv_samepriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_samepriority"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/textsize_settingActivity" />
+
+        <TextView
+            android:id="@+id/tv_samepriorityvl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_textview_style"
+            android:drawableLeft="@drawable/setting_textspace"
+            android:drawableRight="@drawable/setting_dropdown"
+            android:gravity="left|center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_settingActivity" />
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/tv_lowpriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_lowpriority"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/textsize_settingActivity" />
+
+        <TextView
+            android:id="@+id/tv_lowpriorityvl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_textview_style"
+            android:drawableLeft="@drawable/setting_textspace"
+            android:drawableRight="@drawable/setting_dropdown"
+            android:gravity="left|center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_settingActivity" />
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/tv_defaultgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_defaultgroup"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/textsize_settingActivity" />
+
+        <TextView
+            android:id="@+id/tv_defaultgroupvl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_textview_style"
+            android:drawableLeft="@drawable/setting_textspace"
+            android:drawableRight="@drawable/setting_dropdown"
+            android:gravity="left|center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_settingActivity" />
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:id="@+id/tv_defaultringtone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_ringtone"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/textsize_settingActivity" />
+
+        <TextView
+            android:id="@+id/tv_defaultringtonevl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_textview_style"
+            android:drawableLeft="@drawable/setting_textspace"
+            android:drawableRight="@drawable/setting_dropdown"
+            android:gravity="left|center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_settingActivity" />
+    </TableRow>
+
+    <TableRow
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/textsize_settingActivity"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize_settingActivity"
+            android:visibility="gone" />
+    </TableRow>
+</TableLayout>

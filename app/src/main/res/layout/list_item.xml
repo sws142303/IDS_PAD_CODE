@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"/>
+
+        <com.baizhi.app.MarqueeTextView
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/icon"
+            android:id="@+id/id_treenode_label"
+            android:layout_width="@dimen/set_layout_contact_tv_title_width"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="@dimen/set_groupname_fontsize"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:id="@+id/id_treenode_label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="@dimen/set_groupname_fontsize"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/message_show_bg"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/btnMessageCopy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/title_message_copy"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/btnMessageForward"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/title_message_forward"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/btnMessageDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/title_message_delete"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/btnMessageClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/title_message_clear"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

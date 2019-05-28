@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+<RelativeLayout
+    android:id="@+id/relative_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/set_itemChild_height"
+    >
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/set_head_marginLeft"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/head" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/head"
+        android:textSize="@dimen/set_itemChildusername_Height" />
+
+    <TextView
+        android:id="@+id/userstate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/set_itemChilduserstate_Height" />
+</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 监控选项框 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="5.0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/monitor_dialog_bg"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="5dip" >
+
+        <RelativeLayout
+            android:id="@+id/ll_monitor_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/title_monitor_setting_title"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnNeutral"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/dialog_close" />
+        </RelativeLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" >
+
+            <TableRow android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/title_monitor_setting_camera"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dip" >
+
+                    <RadioButton
+                        android:id="@+id/rb_camera_front"
+                        android:layout_width="160dp"
+                        android:layout_height="45dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio_style"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/title_setting_video_camera_front"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_camera_rear"
+                        android:layout_width="160dp"
+                        android:layout_height="45dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio_style"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/title_setting_video_camera_rear"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/title_monitor_setting_answer"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dip" >
+
+                    <RadioButton
+                        android:id="@+id/rb_answer_auto"
+                        android:layout_width="160dp"
+                        android:layout_height="45dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio_style"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/title_monitor_setting_answer_auto"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_answer_manu"
+                        android:layout_width="160dp"
+                        android:layout_height="45dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio_style"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/title_monitor_setting_answer_manu"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/tv_monitor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/title_monitor_setting_monitor"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_monitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dip" >
+
+                    <RadioButton
+                        android:id="@+id/rb_monitor_av"
+                        android:layout_width="160dp"
+                        android:layout_height="45dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio_style"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/title_monitor_setting_monitor_av"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_monitor_video"
+                        android:layout_width="160dp"
+                        android:layout_height="45dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/setting_radio_style"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
+                        android:text="@string/title_monitor_setting_monitor_video"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="top"
+                        android:paddingTop="10dip"
+                        android:text="@string/title_monitor_setting_size"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <com.azkj.pad.utility.MultiRadioGroup
+                    android:id="@+id/rg_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb_size_720p"
+                            android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/setting_radio_style"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/title_monitor_setting_size_720p"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_size_1080p"
+                            android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/setting_radio_style"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/title_monitor_setting_size_1080p"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb_size_cif"
+                            android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/setting_radio_style"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/title_monitor_setting_size_cif"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_size_qcif"
+                            android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/setting_radio_style"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/title_monitor_setting_size_qcif"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb_size_d1"
+                            android:layout_width="160dp"
+                            android:layout_height="45dp"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/setting_radio_style"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/title_monitor_setting_size_d1"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.azkj.pad.utility.MultiRadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnPositive"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="114.0dip"
+                android:layout_height="40.0dip"
+                android:background="@drawable/btn_login_cancel"
+                android:gravity="center"
+                android:text="@string/btn_retry"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/btnNegative"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="114.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="20.0dip"
+                android:background="@drawable/btn_login_cancel"
+                android:gravity="center"
+                android:text="@string/btn_cancel"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="2dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="2dp"
+    android:paddingRight="10dp" >
+
+    <ImageView
+        android:id="@+id/chatTextInUserImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/head"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/chatTextInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/chatTextInUserImage"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/chatTextInUserImage"
+        android:background="@drawable/message_txt_in"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="今天晚上吃什么饭呢" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chatTextInText"
+        android:layout_below="@+id/chatTextInText"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_time"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/chatTextInDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="7月16日 15:37"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

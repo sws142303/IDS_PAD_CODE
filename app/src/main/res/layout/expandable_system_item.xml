@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 会议系统联系人项目布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical">
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/set_MeetingSystemFragment_height"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/list_1_2">
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/set_MeetingSystemFragment_marginLeft"
+        android:contentDescription="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/iv_addorcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/meeting_null" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_image"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="@dimen/set_MeetingSystemFragment_textSize" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/iv_addorcut"
+        android:textSize="@dimen/set_MeetingSystemFragment_textSize" />
+ </RelativeLayout>
+</RelativeLayout>

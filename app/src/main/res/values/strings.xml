@@ -1,0 +1,358 @@
+<resources>
+    <string name="et_add_contact_hint">Enter the name or number query</string>
+    <string name="app_name">PTT_3G_Pad</string>
+    <string name="version_welcome">"<i><u>VERSION 3.4.3.7</u></i>"</string>
+    <string name="typeface">MSYH.ttf</string>
+    <!-- 页面元素显示提示(hint) -->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_serverip">ServerIP</string>
+    <string name="hint_port">port</string>
+    <string name="hint_contact_nmornb">Enter the name or number query</string>
+    <!-- 页面显示静态文本 -->
+    <string name="btn_login">Login</string>
+    <string name="btn_retry">Retry</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="ckb_savepass">Save my password</string>
+    <string name="tv_advancedsettings">Advanced settings</string>
+    <string name="tv_hiddensettings">Hidden settings</string>
+    <string name="tv_copyright">Copyright © 2016 浙江安正科技有限公司</string>
+    <string name="time_separator">:</string>
+    <string name="title_intercom">Intercom</string>
+    <string name="title_calling">Calling</string>
+    <string name="title_meeting">Meeting</string>
+    <string name="title_manymeeting">多方通话</string>
+    <string name="title_message">Message</string>
+    <string name="title_contact">Contact</string>
+    <string name="title_position">Position</string>
+    <string name="title_monitor">Monitor</string>
+    <string name="title_setting">Setting</string>
+    <string name="toatal_setting">设置</string>
+    <string name="title_intercom_queuing">queuing:</string>
+    <string name="title_intercom_speaker">Speaker:</string>
+    <string name="title_intercom_states">States:</string>
+    <string name="title_intercom_group">Group name:</string>
+    <string name="title_intercom_changegroup">change group</string>
+    <string name="title_meeting_seleced">Seleced</string>
+    <string name="title_meeting_voicing">Voice Conference&#8230;&#8230;</string>
+    <string name="title_meeting_videoing">Video conference&#8230;&#8230;</string>
+    <string name="title_meeting_broadcasting">Broadcast&#8230;&#8230;</string>
+    <string name="title_meeting_principles">principles</string>
+    <string name="title_meeting_recreate">recreate</string>
+    <string name="btn_meeting_voice">Voice Conference</string>
+    <string name="btn_meeting_video">Video conference</string>
+    <string name="btn_meeting_broadcast">Broadcast</string>
+    <string name="title_monitor_name">name:</string>
+    <string name="title_monitor_no">no:</string>
+    <string name="title_monitor_date">date:</string>
+    <string name="title_monitor_duration">duration:</string>
+    <string name="title_monitor_list">list</string>
+    <string name="title_monitor_tree">tree</string>
+    <string name="title_monitor_recreate">recreate</string>
+    <string name="title_monitor_setting_title">Video monitoring parameter configuration</string>
+    <string name="title_monitor_setting_camera">Camera:</string>
+    <string name="title_monitor_setting_answer">Answering the way:</string>
+    <string name="title_monitor_setting_answer_auto">Auto</string>
+    <string name="title_monitor_setting_answer_manu">Manu</string>
+    <string name="title_monitor_setting_monitor">Monitor the way:</string>
+    <string name="title_monitor_setting_monitor_av">AV</string>
+    <string name="title_monitor_setting_monitor_video">Video</string>
+    <string name="title_monitor_setting_size">Video size:</string>
+    <string name="title_monitor_setting_size_720p">720P</string>
+    <string name="title_monitor_setting_size_1080p">1080P</string>
+    <string name="title_monitor_setting_size_cif">CIF</string>
+    <string name="title_monitor_setting_size_qcif">QCIF</string>
+    <string name="title_monitor_setting_size_d1">D1</string>
+    <string name="title_contact_local">Local contacts</string>
+    <string name="title_talkgrp">对讲组</string>
+    <string name="title_contact_system">System contacts</string>
+    <string name="title_setting_dispatcher">Dispatcher</string>
+    <string name="title_setting_intercom">Intercom</string>
+    <string name="title_setting_video">Video</string>
+    <string name="title_setting_other">Other</string>
+    <string name="title_setting_outno">Out</string>
+    <string name="title_setting_dispather">Dispather</string>
+    <string name="title_setting_gis">Gis</string>
+    <string name="title_setting_onekey">一键拍传</string>
+    <string name="title_setting_logout">Logout</string>
+    <string name="title_setting_exit">Exit</string>
+    <string name="title_setting_about">关于</string>
+    <string name="title_setting_version">VERSION 3.5.5.1</string>
+    <string name="title_setting_reserved">浙江安正科技有限公司</string>
+    <string name="title_setting_officialwebsite">http://www.angelcomm.cn</string>
+    <string name="title_setting_phoneno">010–87581247</string>
+    <string name="title_setting_dispatcher_title">Connection scheduling machine configuration</string>
+    <string name="title_setting_dispatcher_username">username:</string>
+    <string name="title_setting_dispatcher_password">password:</string>
+    <string name="title_setting_dispatcher_serverip">server IP:</string>
+    <string name="title_setting_dispatcher_port">server port:</string>
+    <string name="title_setting_intercom_priority">intercom priority</string>
+    <string name="title_setting_intercom_highpriority">high priority:</string>
+    <string name="title_setting_intercom_samepriority">with priority:</string>
+    <string name="title_setting_intercom_lowpriority">low priority:</string>
+    <string name="title_setting_intercom_defaultgroup">default group:</string>
+    <string name="title_setting_intercom_ringtone">ring tone:</string>
+    <string name="title_setting_intercom_msg">Will only take effect after restart the software</string>
+    <string name="title_setting_video_camera">camera set</string>
+    <string name="title_setting_video_camera_front">front</string>
+    <string name="title_setting_video_startup">StartUp</string>
+    <string name="title_setting_video_close">Close</string>
+    <string name="title_setting_video_camera_rear">rear</string>
+    <string name="title_setting_video_camera_rotate0">0 degree</string>
+    <string name="title_setting_video_camera_rotate90">90 degree</string>
+    <string name="title_setting_video_camera_rotate180">180 degree</string>
+    <string name="title_setting_video_camera_rotate270">270 degree</string>
+    <string name="title_setting_video_bitrate">Bitrate(30&#8211;10000)(kbps)</string>
+    <string name="title_setting_video_framerate">Framerate(fps)</string>
+    <string name="title_setting_video_sendBuffer">Send cache size unit K (default 128K)（0&#8211;30）（fps）</string>
+    <string name="title_setting_video_receiveBuffer">Receive cache size unit K (default 128K)（0&#8211;30）（fps）</string>
+    <string name="title_setting_video_resolution">resolution set</string>
+    <string name="title_setting_video_resolution_1080P">1080P(1920*1080)</string>
+    <string name="title_setting_video_resolution_720P">720P(1280*720)</string>
+    <string name="title_setting_video_resolution_vga">VGA(640*480)</string>
+    <string name="title_setting_video_resolution_d1">D1(704*576)</string>
+    <string name="title_setting_video_resolution_cif">CIF(288*352)</string>
+    <string name="title_setting_video_resolution_qvga">QVGA(240*320)</string>
+    <string name="title_setting_other_encrypt">Whether or not to output a log</string>
+    <string name="title_setting_other_stun">Whether to enable NAT</string>
+    <string name="title_setting_other_startup">Is powered up</string>
+    <string name="title_setting_other_netmonitor">Whether to open FEC</string>
+    <string name="title_setting_other_setFir">Optimize the quality of video recording</string>
+    <string name="title_setting_other_outsidecall">Preferential Outside Call</string>
+    <string name="title_setting_logout_title">Determine the cancellation of the current account?</string>
+    <string name="btn_setting_exit">Safety exit</string>
+    <string name="btn_setting_about_checkversion">Check version</string>
+    <string name="btn_position_visible">VISIBLE</string>
+    <string name="btn_position_gone">GONE</string>
+    <string name="btn_position_pushvideo">PushVideo</string>
+    <string name="btn_position_info">Info</string>
+    <string name="btn_position_close">Close</string>
+    <string name="btn_calling_holdon">hold on</string>
+    <string name="title_main_exitinfo">alert</string>
+    <string name="title_main_ifexit">completely exit ?</string>
+    <string name="title_main_minialmize">minimize</string>
+    <string name="title_main_exit">exit</string>
+    <string name="title_meeting_title">info</string>
+    <string name="title_meeting_info">Monitor is showing.</string>
+    <string name="title_monitor_title">info</string>
+    <string name="title_monitor_info">video meeting is showing.</string>
+    <string name="btn_calling_answer">接听</string>
+    <string name="btn_calling_decline">忽略</string>
+    <string name="btn_calling_handsfree">免提</string>
+    <string name="btn_calling_hangup">挂断</string>
+    <string name="btn_calling_invitejoin">邀请入会</string>
+    <string name="btn_calling_member">成员</string>
+    <string name="btn_calling_mute">静音</string>
+    <string name="btn_calling_switchCamera">切换摄像头</string>
+    <string name="btn_calling_offline">离线</string>
+    <string name="btn_calling_voiceanswer">语音接听</string>
+    <string name="btn_calling_videoanswer">视频接听</string>
+    <string name="btn_save">保存</string>
+    <string name="contact_email">邮箱格式错误</string>
+    <string name="info_ifContinue">当前已有通话，是否继续发起？</string>
+    <string name="info_continue">继续</string>
+    <string name="info_notcontinue">放弃</string>
+    <string name="sp_stun">PTT_SP_STUN</string>
+    <string name="title_contact_add">添加联系人</string>
+    <string name="title_contact_edit">编辑联系人</string>
+    <string name="title_contact_company">公&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;司：</string>
+    <string name="title_contact_email">电子邮箱：</string>
+    <string name="title_contact_housephone">住宅电话：</string>
+    <string name="title_contact_ipphone">I&#160;&#160;P&#160;&#160;电&#160;话：</string>
+    <string name="title_contact_mobilephone">移动电话：</string>
+    <string name="title_contact_name">名&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;称：</string>
+    <string name="title_contact_officephone">办公电话：</string>
+    <string name="title_contact_surname">姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;氏：</string>
+    <string name="title_message_choose">从相册中选择</string>
+    <string name="title_message_clear">清空</string>
+    <string name="title_message_copy">复制</string>
+    <string name="title_message_delete">删除</string>
+    <string name="title_message_edit">编辑</string>
+    <string name="title_message_forward">转发</string>
+    <string name="title_message_new">新信息</string>
+    <string name="title_message_photo">拍照</string>
+    <string name="title_message_photo_faild">拍照保存失败，请重新拍照</string>
+    <string name="title_message_reply">回复</string>
+    <string name="title_message_send_empty">请选择联系人</string>
+    <string name="title_message_send_my">不能给自己发送消息</string>
+    <string name="title_message_send_blank">收件人必须是数字</string>
+    <string name="title_message_send_success">消息发送成功</string>
+    <string name="title_message_send_faild">消息发送失败</string>
+    <string name="title_message_to">收件人：</string>
+    <string name="title_message_voice">音频</string>
+    <string name="title_message_video">视频</string>
+    <string name="title_monitor_message">正在进行视频呼叫</string>
+    <string name="title_postion_3g">智能终端</string>
+    <string name="title_postion_all">全选</string>
+    <string name="title_postion_clean">清除</string>
+    <string name="title_postion_click">点选</string>
+    <string name="title_postion_circle">圈选</string>
+    <string name="title_postion_multiple">多选</string>
+    <string name="title_postion_filter">筛选</string>
+    <string name="title_postion_monitor">监控设备</string>
+    <string name="title_postion_no">用户号码或名称</string>
+    <string name="title_postion_play">播放</string>
+    <string name="title_postion_pause">暂停</string>
+    <string name="title_postion_range">范围：</string>
+    <string name="title_postion_rectangle">框选</string>
+    <string name="title_postion_search">查询</string>
+    <string name="title_postion_single">单选</string>
+    <string name="title_postion_sip">SIP终端</string>
+    <string name="title_postion_time">当前时间:</string>
+    <string name="title_postion_trace">追踪</string>
+    <string name="title_postion_track">轨迹</string>
+    <string name="title_postion_untrace">取消</string>
+    <string name="title_postion_voice">音频通话</string>
+    <string name="title_postion_video">视频通话</string>
+    <string name="title_setting_video_camera_q">前置     旋转角度</string>
+    <string name="title_setting_video_camera_h">后置     旋转角度</string>
+    <string name="title_setting_video_camera_msg">修改摄像头配置，重启软件后才会生效</string>
+    <string name="title_setting_video_camera_orientation">前后方向</string>
+    <string name="wrong_port">错误的端口号</string>
+    <!-- 默认值(default value) -->
+    <string name="default_username" />
+    <string name="default_password" />
+    <string name="default_serverip" />
+    <string name="default_port">5060</string>
+    <string name="default_callingrecord_count">1000</string>
+    <string name="default_messagerecord_count">2000</string>
+    <string name="default_video_bitrate">100</string>
+    <string name="sp_outno">9</string>
+    <!-- 全局存储(sharepreference keys) -->
+    <string name="sp_init_flag">PTT_INIT_FLAG</string>
+    <string name="sp_username">PTT_SP_USERNAME</string>
+    <string name="sp_password">PTT_SP_PASSWORD</string>
+    <string name="sp_savepass">PTT_SP_SAVEPASS</string>
+    <string name="sp_serverip">PTT_SP_SERVERIP</string>
+    <string name="sp_port">PTT_SP_PORT</string>
+    <string name="sp_intercom_highpriority">PTT_SP_INTERCOM_HIGHPRIORITY</string>
+    <string name="sp_intercom_samepriority">PTT_SP_INTERCOM_SAMEPRIORITY</string>
+    <string name="sp_intercom_lowpriority">PTT_SP_INTERCOM_LOWPRIORITY</string>
+    <string name="sp_intercom_defaultgroup">PTT_SP_INTERCOM_DEFAULTGROUP</string>
+    <string name="sp_intercom_defaultringtone">PTT_SP_INTERCOM_DEFAULTRINGTONE</string>
+    <string name="sp_video_camera">PTT_SP_VIDEO_CAMERA</string>
+    <string name="sp_video_rotate">PTT_SP_VIDEO_ROTATE</string>
+    <string name="sp_video_bitrate">PTT_SP_VIDEO_BITRATE</string>
+    <string name="sp_videosp_bitrate">PTT_SP_VIDEO_BITRATE</string>
+    <string name="sp_video_resolution">PTT_SP_VIDEO_RESOLUTION</string>
+    <string name="sp_debug_on">PTT_SP_DEBUG_ON</string>
+    <string name="sp_encryption">PTT_SP_ENCRYPTION</string>
+    <string name="sp_auto_start">PTT_AUTO_START</string>
+    <string name="sp_start_suspend">PTT_START_SUSPEND</string>
+    <string name="sp_showorhidden">PTT_SP_SHOWORHIDDEN</string>
+    <!-- 提示消息 -->
+    <string name="info_logining">logining#8230;#8230;#8230;</string>
+    <string name="info_loading">解码器信息加载中&#8230;&#8230;&#8230;</string>
+    <string name="info_video_inuse">video device is in use</string>
+    <string name="info_contact_admin">Verify that the server parameters and account information,\nsuch as repeated please contact the administrator!</string>
+    <string name="info_network_unavailable">Network Unavailable</string>
+    <string name="info_network_ok">Network OK</string>
+    <string name="info_network_changed">Network Changed</string>
+    <string name="info_intercom_new_incoming">incoming call:</string>
+    <string name="info_intercom_new_incoming1">Choose the answer, the current call will enter a state of keeping \ n choose to ignore, new calls will be rejected</string>
+    <string name="info_intercom_new_calling">incoming call:</string>
+    <string name="info_intercom_new_calling1">Choose the answer, the current call will enter a state of keeping \ n choose to ignore, new calls will be rejected</string>
+    <string name="info_intercom_select_group">Please select the intercom group</string>
+    <string name="info_meeting_empty_member">Please select the participants</string>
+    <string name="info_meeting_route_busy">route busy</string>
+    <string name="info_meeting_create_error">Failed to create temporary meeting, create again?</string>
+    <string name="info_meeting_create_errorinfo">error code:</string>
+    <string name="info_meeting_empty_phoneno">Please enter a valid phone number</string>
+    <string name="info_monitor_create_error">Monitor the failure to be obtained, draw on again?</string>
+    <string name="info_monitor_create_errorinfo">error code:</string>
+    <string name="wrong_ip">wrong ip addr</string>
+    <string name="wrong_accrditip">wrong accrdit ip addr</string>
+    <string name="wrong_login">Failed user login</string>
+    <string name="contact_surname">请输入姓氏</string>
+    <string name="contact_name">请输入名字</string>
+    <string name="contact_phone">请至少填写一项电话</string>
+    <string name="contact_ip">IP电话必须是数字</string>
+    <string name="contact_mobilephone">手机电话格式错误</string>
+    <string name="contact_success">添加联系人成功</string>
+    <string name="calling_number">请输入要呼叫的号码</string>
+    <string name="req_reg_members">请求矩形定位</string>
+    <string name="title_postion_dispather">调度台</string>
+    <string name="req_filter_leixing">请选择筛选类型</string>
+    <string name="callquicktimer">呼叫过于频繁3秒后重试</string>
+    <string name="monitorAlreayGoing">监控已经存在不能再次打开</string>
+    <string name="loadTimeout_DecodList">获取解码器列表超时</string>
+    <string name="loadTimeout_DecodType">获取解码器类型超时</string>
+    <string name="loadTimeout_tongdao">获取解码器通道超时</string>
+    <string name="btn_position_decodingupperwall">开始上墙</string>
+    <string name="btn_position_decodingupperwa">结束上墙</string>
+    <string name="title_setting_other_other">Statistical packet loss rate, delay</string>
+    <string name="title_setting_other_other22">Statistical packet loss rate, delay222</string>
+    <string name="title_setting_other_flowerscreen">Set Flower Screen</string>
+    <string name="title_setting_other_callAnswer">Set Call Answer</string>
+    <string name="title_setting_other_enable_h265">Set Enable H265</string>
+    <string name="title_setting_ARS">ARS</string>
+    <string name="title_setting_nack">NACK</string>
+    <string name="title_setting_tmmbr">TMMBR</string>
+    <string name="title_setting_resolutioncon">Resolution Control</string>
+    <string name="info_dcoding">解码上墙</string>
+    <string name="info_null">暂无可选择数据</string>
+    <string name="text_mode_normal">NORMAL</string>
+    <string name="text_mode_in_call">IN_CALL</string>
+    <string name="text_mode_in_communication">IN_COMMUNICATION</string>
+    <string-array name="intercom_priority">
+        <item>inform</item>
+        <item>auto answer</item>
+        <item>auto rejected</item>
+    </string-array>
+    <string-array name="video_camera">
+        <item>front</item>
+        <item>rear</item>
+    </string-array>
+    <string-array name="video_rotate">
+        <item>0 degree</item>
+        <item>90 degree</item>
+        <item>180 degree</item>
+        <item>270 degree</item>
+    </string-array>
+    <string-array name="video_resolution">
+        <item>1080P(1920*1080)</item>
+        <item>720P(1280*720)</item>
+        <item>VGA(640*480)</item>
+        <item>D1(704*576)</item>
+        <item>CIF(288*352)</item>
+        <item>QVGA(240*320)</item>
+    </string-array>
+    <string-array name="anr_level">
+        <item>Off</item>
+        <item>Low</item>
+        <item>Mid</item>
+        <item>Hight</item>
+        <item>VeryHight</item>
+    </string-array>
+    <string-array name="call_Resolvingpower">
+        <item>1080P(1920*1080)</item>
+        <item>720P(1280*720)</item>
+        <item>D1(720*576)</item>
+        <item>VGA(640*480)</item>
+        <item>CIF(352*288)</item>
+        <item>QVGA(320*240)</item>
+        <item>QCIF(176*144)</item>
+    </string-array>
+    <!-- 以上信息已确认 -->
+    <string name="text_delete">批量删除</string>
+
+    <item name="message_audio_in_Records" type="id">
+
+    </item>
+    <item name="message_audio_in_Holder" type="id">
+
+    </item>
+    <item name="message_audio_in_View" type="id">
+
+    </item>
+    <item name="message_audio_out_Records" type="id">
+
+    </item>
+    <item name="message_audio_out_Holder" type="id">
+
+    </item>
+    <item name="message_head_yuan" type="id">
+
+    </item>
+</resources>

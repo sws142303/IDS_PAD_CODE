@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/message_list_bg" >
+
+    <RelativeLayout
+        android:id="@+id/layoutMessageTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragmentmessage_show_layoutMessageTop_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/contact_add_bg" >
+        <ImageButton 
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/set_fragmentmessage_show_btnBack_width"
+            android:layout_height="@dimen/set_fragmentmessage_show_btnBack_height"
+            android:src="@drawable/back"
+            android:background="@null"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"/>
+        <TextView
+            android:id="@+id/txtMessageUserNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+            android:textSize="@dimen/set_fragmentmessage_show_txtMessageUserNo_textSize"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:ellipsize="end" />
+    </RelativeLayout>
+
+    <com.azkj.sws.library.PullToRefreshListView
+        android:id="@+id/showMessageList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/message_edit_layout"
+        android:layout_below="@id/layoutMessageTop"
+        android:divider="@null">
+    </com.azkj.sws.library.PullToRefreshListView>
+
+    <RelativeLayout
+        android:id="@+id/message_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragmentmessage_show_message_edit_layout_height"
+        android:layout_above="@+id/message_new_foot"
+        android:background="@drawable/page_footer"
+        android:paddingLeft="@dimen/set_fragmentmessage_show_message_edit_layout_marginleft"
+        android:paddingRight="@dimen/set_fragmentmessage_show_message_edit_layout_marginright"  >
+
+        <EditText
+            android:id="@+id/messageBody"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_fragmentmessage_show_messageBody_height"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/messagebtnsend"
+            android:inputType="text"
+            android:background="@drawable/metting_edit_bg"
+            android:layout_marginRight="@dimen/set_fragmentmessage_show_message_edit_layout_marginright"/>
+
+        <ImageButton
+            android:id="@+id/messagebtnsend"
+            android:layout_width="@dimen/set_fragmentmessage_show_messagebtnsend_width"
+            android:layout_height="@dimen/set_fragmentmessage_show_messagebtnsend_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/message_btn_send"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/recorderLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragmentmessage_show_message_edit_layout_height"
+        android:background="@drawable/page_footer"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/btnRecoderHidden"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_voice_click"/>
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/btnRecoderBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/voice_begin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/message_new_foot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragmentmessage_show_message_new_foot_height"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton android:id="@+id/btnMessageImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_image"
+            android:contentDescription="@string/app_name" />
+
+        <ImageButton android:id="@+id/btnMessageVoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_recording"
+            android:contentDescription="@string/app_name" />
+
+        <ImageButton android:id="@+id/btnMessageVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_video"
+            android:contentDescription="@string/app_name" />
+
+        <ImageButton android:id="@+id/btnMessageLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_location"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+</RelativeLayout>

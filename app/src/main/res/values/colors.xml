@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0a0c59</color>
+    <color name="main_bg">#2d609f</color>
+    <color name="page_bg">#d6dde4</color>
+    <color name="content_bg">#4277b1</color>
+    <color name="monitor_bg">#526877</color>
+    <color name="monitor_info_bg">#3f5b6b</color>
+    <color name="monitor_info_text_bg">#9cb3c9</color>
+    <color name="monitor_dialog_bg">#4879b4</color>
+    <color name="intercom_list_bg">#e9f1f8</color>
+    <color name="intercom_list_online">#81a92e</color>
+    <color name="intercom_list_offline">#838383</color>
+    <color name="intercom_queuing">#636365</color>
+    <color name="meeting_selected">#528cb5</color>
+    <color name="meeting_keyboard_bg">#D6DDE4</color>
+    <color name="meeting_meeting_bg">#eef0f5</color>
+    <color name="meeting_meeting_online_bg">#528cb4</color>
+    <color name="meeting_meeting_selected">#b5e51d</color>
+    <color name="contact_main_bg">#e8f1f5</color>
+    <color name="contact_title_bg">#E6F4F2</color>
+    <color name="contact_title_selected">#3d71af</color>
+    <color name="contact_title_unselected">#545351</color>
+    <color name="setting_about">#538cb7</color>
+    <color name="setting_content_bg">#bcccdb</color>
+    <color name="contact_user_color">#D4D4D4</color>
+</resources>

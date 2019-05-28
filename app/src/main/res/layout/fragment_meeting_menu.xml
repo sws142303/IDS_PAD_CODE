@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_myview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- <ListView -->
+    <!-- android:id="@+id/mylistview" -->
+    <!-- android:layout_width="300dp" -->
+    <!-- android:layout_height="200dp" -->
+    <!-- android:cacheColorHint="#ffffff" -->
+    <!-- android:divider="#ffffff" -->
+    <!-- android:dividerHeight="1dip" -->
+    <!-- android:listSelector="#00000000" > -->
+    <!-- </ListView> -->
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="请选择解码器" />
+
+    <Spinner
+        android:id="@+id/selectedDcod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="请选择类型" />
+
+    <Spinner
+        android:id="@+id/selectedtype"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="请选择关联通道" />
+
+    <Spinner
+        android:id="@+id/selectedchan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btnsbmit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="确 定" >
+    </Button>
+
+    <Button
+        android:id="@+id/btnCanal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="取 消" >
+    </Button>
+"
+
+</LinearLayout>

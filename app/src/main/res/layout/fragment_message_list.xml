@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 左侧 -->
+    <LinearLayout 
+       android:id="@+id/topPlan"
+       android:layout_width="@dimen/setleft_width_liner"
+       android:layout_height="wrap_content"
+       android:background="@drawable/linear_calling_background"
+       android:visibility="visible"
+       android:paddingLeft="5dp">
+        
+        <TextView 
+            android:id="@+id/listNum"
+            android:layout_width="@dimen/set_calling_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="共[0]条"/>
+        <ImageButton
+            android:id="@+id/messagedelbutton"
+            android:layout_width="@dimen/setleft_deleteico_width"
+            android:layout_height="@dimen/setleft_deleteico_height"
+            android:scaleType="centerInside"
+            android:src="@drawable/delete_ioc"
+            android:background="@drawable/delete_ioc"
+            android:layout_marginLeft="@dimen/setleft_marginLeft" 
+            android:layout_marginTop="2dp"/>
+
+    </LinearLayout>
+    <LinearLayout 
+       android:id="@+id/messagedellayout"
+      android:layout_width="@dimen/setleft_width_liner"
+       android:layout_height="wrap_content"
+       android:background="@drawable/linear_calling_background"
+       android:visibility="gone"
+       android:layout_below="@+id/topPlan"
+       android:paddingLeft="5dp">
+       <CheckBox android:id="@+id/checkAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox"
+             android:layout_weight="1"
+           android:text="全选"/>
+       <Button
+           android:id="@+id/btndelete"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/setleft_btndelete_heigth"
+        android:layout_marginLeft="@dimen/setleft_btndelete_marginleft"
+        android:text="删除"
+        android:background="#960808"
+        android:layout_weight="2"
+        />
+       <Button android:id="@+id/Cancel"
+       android:layout_width="wrap_content"
+        android:layout_height="@dimen/setleft_btndelete_heigth"
+        android:layout_marginLeft="5dp"
+        android:text="取消"
+        android:background="#127c1c"
+        android:layout_weight="2"
+        />
+   </LinearLayout>
+<ListView
+        android:id="@+id/messagelist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnNewMessage"
+        android:divider="@color/white"
+        android:dividerHeight="0dp"
+        android:layout_below="@id/messagedellayout" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btnNewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragmentMessage_botom_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/newmessage" />
+</RelativeLayout>

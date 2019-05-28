@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Account" >
+        <EditTextPreference
+            android:id="@+id/id_edittext_setting_username"
+            android:defaultValue="@string/default_username"
+            android:key="@string/sp_username" />
+        <EditTextPreference
+            android:id="@+id/id_edittext_setting_password"
+            android:defaultValue="@string/default_password"
+            android:key="@string/sp_password" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/sp_savepass" />
+        <EditTextPreference
+            android:id="@+id/id_edittext_setting_serverip"
+            android:defaultValue="@string/default_serverip"
+            android:key="@string/sp_serverip" />
+        <EditTextPreference
+            android:id="@+id/id_edittext_setting_serverport"
+            android:defaultValue="@string/default_port"
+            android:key="@string/sp_port" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Intercom" >
+        <ListPreference
+            android:entries="@array/intercom_priority"
+            android:entryValues="@array/intercom_priority"
+            android:key="@string/sp_intercom_highpriority" />
+        <ListPreference
+            android:entries="@array/intercom_priority"
+            android:entryValues="@array/intercom_priority"
+            android:key="@string/sp_intercom_samepriority" />
+        <ListPreference
+            android:entries="@array/intercom_priority"
+            android:entryValues="@array/intercom_priority"
+            android:key="@string/sp_intercom_lowpriority" />
+        <ListPreference
+            android:id="@+id/id_textview_default_ringtone"
+            android:key="@string/sp_intercom_defaultgroup" />
+        <ListPreference
+            android:id="@+id/id_textview_default_ringttwo"
+            android:key="@string/sp_intercom_defaultringtone" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Video" >
+        <ListPreference
+            android:entries="@array/video_camera"
+            android:entryValues="@array/video_camera"
+            android:key="@string/sp_video_camera" />
+        <ListPreference
+            android:entries="@array/video_rotate"
+            android:entryValues="@array/video_rotate"
+            android:key="@string/sp_video_rotate" />
+        <EditTextPreference
+            android:id="@+id/id_edittext_setting_bitrate"
+            android:defaultValue="@string/default_video_bitrate"
+            android:key="@string/sp_video_bitrate" />
+        <ListPreference
+            android:entries="@array/video_resolution"
+            android:entryValues="@array/video_resolution"
+            android:key="@string/sp_video_resolution" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Other" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/sp_debug_on" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/sp_encryption" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/sp_stun" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/sp_auto_start" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/sp_start_suspend" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/sp_showorhidden" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

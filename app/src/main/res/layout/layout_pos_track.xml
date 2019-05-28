@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/set_layout_pos_filter_track_main_width"
+    android:layout_height="@dimen/set_layout_pos_filter_height"
+  >
+
+    <!--android:layout_width="@dimen/set_layout_pos_filter_track_main_width"-->
+    <!--android:layout_height="@dimen/set_layout_pos_filter_track_main_height"-->
+
+
+    <LinearLayout
+        android:layout_width="@dimen/set_layout_pos_filter_track_main_width"
+        android:layout_height="@dimen/set_layout_pos_filter_height"
+        android:background="@drawable/pos_track_bg"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical">
+
+            <TextView
+                android:id="@+id/btnTrackClean"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/pos_btn_bg_click"
+                android:gravity="center"
+                android:text="@string/title_message_clear"
+                android:textColor="@color/white"
+                android:textSize="@dimen/set_layout_pos_filter_track_textSize"
+                />
+
+            <ListView
+                android:id="@+id/trackListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/btnTrackClean"
+                android:paddingRight="1px"></ListView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#000000">
+
+        </View>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.7"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/set_layout_pos_filter_track_linerMarginTop"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTrackUserNo"
+                    android:layout_width="@dimen/set_layout_pos_filter_track_editTrackUserNo_width"
+                    android:layout_height="@dimen/set_layout_pos_filter_trackeEditText_width"
+                    android:background="@drawable/pos_edit_bg"
+                    android:drawableRight="@drawable/spinner_down"
+                    android:hint="@string/title_postion_no"
+                    android:inputType="number"
+                    android:textSize="@dimen/set_layout_pos_filter_track_textSize" />
+
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/spinner1"
+                    style="@style/spinner_style"
+                    android:layout_width="@dimen/layuot_pos_track_spinner"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnTrackAddNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/set_layout_pos_filter_trackeEditText_width"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/pos_btn_add"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_startTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearlayout_top"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/set_layout_pos_filter_track_liner_margintop"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/trackBeginDate"
+                    android:layout_width="@dimen/set_layout_pos_filter_track_trackBeginDate_width"
+                    android:layout_height="@dimen/set_layout_pos_filter_trackeEditText_width"
+                    android:focusable="false"
+                    android:hint="开始日期"
+                    android:inputType="datetime"
+                    android:text=""
+                    android:textSize="@dimen/set_layout_pos_filter_track_textSize" />
+
+                <EditText
+                    android:id="@+id/trackBeginTime"
+                    android:layout_width="@dimen/set_layout_pos_filter_track_trackBeginTime_width"
+                    android:layout_height="@dimen/set_layout_pos_filter_trackeEditText_width"
+                    android:focusable="false"
+                    android:hint="开始时间"
+                    android:inputType="time"
+                    android:text=""
+                    android:textSize="@dimen/set_layout_pos_filter_track_textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout_startTimer"
+                android:layout_gravity="left"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <!-- 结束日期和时间控件 -->
+
+                <EditText
+                    android:id="@+id/trackEndDate"
+                    android:layout_width="@dimen/set_layout_pos_filter_track_trackBeginDate_width"
+                    android:layout_height="@dimen/set_layout_pos_filter_trackeEditText_width"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:hint="结束日期"
+                    android:inputType="date"
+                    android:text=""
+                    android:textSize="@dimen/set_layout_pos_filter_track_textSize"
+                    />
+
+                <EditText
+                    android:id="@+id/trackEndTime"
+                    android:layout_width="@dimen/set_layout_pos_filter_track_trackBeginTime_width"
+                    android:layout_height="@dimen/set_layout_pos_filter_trackeEditText_width"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:hint="结束时间"
+                    android:inputType="time"
+                    android:text=""
+                    android:textSize="@dimen/set_layout_pos_filter_track_textSize"
+                    />
+                <!-- 结束日期和时间控件 -->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnTrackSearch"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/pos_btn_bg_click"
+                android:gravity="center"
+                android:text="@string/title_postion_search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/set_layout_pos_filter_track_textSize"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

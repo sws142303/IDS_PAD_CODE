@@ -1,0 +1,43 @@
+<!-- 帧布局 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 用来展示画面 -->
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <!-- 相对布局,该界面默认不显示出来，当触摸屏幕时候显示出来 -->
+
+    <RelativeLayout
+        android:id="@+id/buttonlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!-- 刻录按钮 -->
+
+        <Button
+            android:id="@+id/recoderbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="开始录制" />
+        <!-- 停止按钮 -->
+
+        <Button
+            android:id="@+id/stopbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/recoderbutton"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/recoderbutton"
+            android:enabled="false"
+            android:text="结束录制" />
+    </RelativeLayout>
+
+</FrameLayout>

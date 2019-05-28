@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通讯录-系统联系人页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<ExpandableListView-->
+        <!--android:id="@+id/contact_system_expandableview"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="0dip"-->
+        <!--android:layout_weight="5"-->
+        <!--android:dividerHeight="0dp" >-->
+    <!--</ExpandableListView>-->
+
+    <ListView
+        android:id="@+id/contact_system_expandableview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="@null"
+        android:background="@color/meeting_keyboard_bg">
+
+    </ListView>
+
+</LinearLayout>

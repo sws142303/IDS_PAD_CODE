@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity" >
+
+    <!-- Tab标签显示内容 -->
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.3"
+        android:background="@color/page_bg"
+        android:orientation="vertical" >
+        <!-- Tab标签 -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" >
+
+            <Button
+                android:textSize="@dimen/textsize_settingActivity"
+                android:id="@+id/txtDispatcher"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/set_activity_button_height"
+                android:background="@drawable/list_1"
+                android:gravity="center"
+                android:text="@string/title_setting_dispatcher"
+                android:textColor="@color/contact_title_selected"
+                 />
+
+            <Button
+                android:id="@+id/txtIntercom"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/set_activity_button_height"
+                android:layout_below="@id/txtDispatcher"
+                android:background="@drawable/list_1"
+                android:gravity="center"
+                android:text="@string/title_setting_intercom"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <Button
+                android:id="@+id/txtVideo"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/set_activity_button_height"
+                android:layout_below="@id/txtIntercom"
+                android:background="@drawable/list_1"
+                android:gravity="center"
+                android:text="@string/title_setting_video"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <Button
+                android:id="@+id/txtOther"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/set_activity_button_height"
+                android:layout_below="@id/txtVideo"
+                android:background="@drawable/list_1"
+                android:gravity="center"
+                android:text="@string/title_setting_other"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <!-- <Button
+                android:id="@+id/txtLogout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/set_activity_button_height"
+                android:layout_below="@id/txtOther"
+                android:background="@drawable/list_1"
+                android:gravity="center"
+                android:text="@string/title_setting_logout"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/set_activity_setting_textSize" />
+ -->
+            <Button
+                android:id="@+id/txtExit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/set_activity_button_height"
+                android:layout_below="@id/txtOther"
+                android:background="@drawable/list_1"
+                android:gravity="center"
+                android:text="@string/title_setting_exit"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+        </RelativeLayout>
+
+        <!-- 关于信息 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:paddingLeft="20dp" >
+
+            <TextView
+                android:id="@+id/tv_placeholder1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="" 
+                android:textSize="@dimen/textsize_settingActivity"/>
+
+            <LinearLayout
+                android:id="@+id/Linear_phoneno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_placeholder1"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/tv_phonenotv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="客户电话:"
+                    android:textColor="@color/setting_about" />
+
+                <TextView
+                    android:id="@+id/tv_phoneno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/title_setting_phoneno"
+                    android:textColor="@color/setting_about" />
+            </LinearLayout>
+
+            <TextView
+                android:textSize="@dimen/textsize_settingActivity"
+                android:id="@+id/tv_placeholder2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_above="@id/Linear_phoneno"
+                android:layout_alignParentLeft="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/Linear_officialwebsite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_placeholder2"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/tv_officialwebsitetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="官方网站:"
+                    android:textColor="@color/setting_about" />
+
+                <TextView
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/tv_officialwebsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/title_setting_officialwebsite"
+                    android:textColor="@color/setting_about" />
+            </LinearLayout>
+            <TextView
+                android:textSize="@dimen/textsize_settingActivity"
+                android:id="@+id/tv_placeholder3"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_above="@id/Linear_officialwebsite"
+                android:layout_alignParentLeft="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="" />
+            <LinearLayout
+                android:id="@+id/Linear_reserved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_placeholder3"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+                <TextView
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/tv_reservedtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="版权所有:"
+                    android:textColor="@color/setting_about" />
+                <TextView
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/tv_reserved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/title_setting_reserved"
+                    android:textColor="@color/setting_about" />
+            </LinearLayout>
+            <TextView
+                android:textSize="@dimen/textsize_settingActivity"
+                android:id="@+id/tv_placeholder4"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_above="@id/Linear_reserved"
+                android:layout_alignParentLeft="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="" />
+            <LinearLayout
+                android:id="@+id/Linear_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_placeholder4"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+                <TextView
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/tv_versiontv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="版本编号:"
+                    android:textColor="@color/setting_about" />
+                <TextView
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/title_setting_version"
+                    android:textColor="@color/setting_about" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Tab内容显示区域 -->
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:background="@color/setting_content_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lll_show"
+            android:layout_width="match_parent"
+            android:background="#5d6e7e"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/set_downheight">
+            <Button
+                android:layout_gravity="center_vertical"
+                android:id="@+id/btn_show"
+                android:layout_width="@dimen/setleft_calling_btnGone_width"
+                android:layout_height="@dimen/setleft_calling_btnGone_height"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                android:background="@drawable/pos_show_click"
+                android:text="显示列表"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+        <!--
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" >
+        </android.support.v4.view.ViewPager>
+        -->
+
+        <com.azkj.pad.utility.ForbidSlideViewPager
+            android:layout_above="@id/lll_show"
+            android:id="@+id/vPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:flipInterval="30"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:persistentDrawingCache="animation" >
+        </com.azkj.pad.utility.ForbidSlideViewPager>
+	<!-- 	Sws 11/09 隐藏  一切zhengc -->
+      <!--   <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone" /> -->
+    </RelativeLayout>
+
+</LinearLayout>

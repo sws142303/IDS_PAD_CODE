@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 配置-其他配置 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/set_intercomFragment_paddingleft"
+    android:paddingRight="@dimen/set_intercomFragment_paddingright"
+    android:paddingTop="@dimen/set_intercomFragment_paddingtop"
+    android:stretchColumns="0,1"
+    tools:context=".SettingOtherFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_encrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_encrypt"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_encrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:enabled="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_stun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_stun"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_stun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:layout_alignParentRight="true"
+                    android:enabled="true"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_startup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_startup"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_startup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:layout_alignParentRight="true"
+                   android:enabled="true"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_isOpenFEC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_netmonitor"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_isOpenFEC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:enabled="true"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_setfir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_setFir"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_setfir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:enabled="true"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_MediaStatistics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_other"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_MediaStatistics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_MediaStatistics2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_other22"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_MediaStatistics2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_FlowerScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_flowerscreen"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_FlowerScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+                    android:enabled="true"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:gravity="right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_CallAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/title_setting_other_callAnswer"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <CheckBox
+                    android:id="@+id/cb_CallAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/setting_switch_style"
+                    android:gravity="right" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#66000000"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@drawable/setting_radio_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置音频模式"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:background="#ffffff"
+                        android:id="@+id/et_audioMode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:inputType="number"
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:gravity="center_vertical"
+                        android:text="当前音频模式:"
+                        android:layout_margin="5dp"/>
+
+                    <Button
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/btn_settingOther_AudioMode"
+                        android:text="保存"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:background="@drawable/setting_radio_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置音频编解码优先级"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:background="#ffffff"
+                        android:id="@+id/et_voice_priority"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:inputType="number"
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:gravity="center_vertical"
+                        android:text="优先级设置(排序越靠上优先级越高)"
+                        android:layout_margin="5dp"/>
+
+                    <Button
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/btn_settingOther_voicePriority"
+                        android:text="保存"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/setting_radio_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="文件服务器端口"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:id="@+id/et_settingOther_port"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:text="8080" />
+
+                    <Button
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/btn_settingOther_port"
+                        android:text="保存"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/setting_radio_bg"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配置RTP分包大小"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:id="@+id/et_rtpSize"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:inputType="number"/>
+
+                    <Button
+                        android:textSize="@dimen/textsize_settingActivity"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/btn_rtpSize"
+                        android:text="保存"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:background="@drawable/setting_radio_bg"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_text5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="语音发送增益"
+                        android:textColor="@color/contact_title_selected"
+                        android:textSize="@dimen/textsize_settingActivity" />
+
+                    <RadioGroup
+                        android:id="@+id/rb_voiceSend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceSend_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="静音" />
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceSend_0_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="音量减半" />
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceSend_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="无增益" />
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceSend_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="二倍音量" />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/setting_radio_bg"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_text6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="语音接收增益"
+                        android:textColor="@color/contact_title_selected"
+                        android:textSize="@dimen/textsize_settingActivity" />
+                    <RadioGroup
+                        android:id="@+id/rb_voiceReceive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceReceive_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="静音" />
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceReceive_0_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="音量减半" />
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceReceive_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="无增益" />
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_voiceReceive_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="二倍音量" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--回音消除-->
+            <LinearLayout
+                android:background="@drawable/setting_radio_bg"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_text7"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配置回音消除参数"/>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_text8"
+                        android:textColor="@color/contact_title_selected"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="回音消除模块(默认为webrtc)" />
+                    <RadioGroup
+                        android:id="@+id/rg_modular"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_modular_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="speex"/>
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_modular_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="simple"/>
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rb_modular_3"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="webrtc"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_text9"
+                        android:textColor="@color/contact_title_selected"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是否启用降噪" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_noiseReduction"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rg_noiseReduction_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="启用"/>
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rg_noiseReduction_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="关闭"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textColor="@color/contact_title_selected"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="处理等级"
+                        android:id="@+id/textView" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_grade"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rg_grade_1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="宽松"/>
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rg_grade_2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="中等"/>
+                        <RadioButton
+                            android:textSize="@dimen/textsize_settingActivity"
+                            android:id="@+id/rg_grade_3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="严格"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <Button
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/btn_Preservation"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="保存配置"/>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

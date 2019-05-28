@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/contact_local_menu_bg"
+    android:gravity="center_horizontal" >
+     <ImageButton
+        android:id="@+id/btnContactAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/calling_audio" />
+
+    <ImageButton
+        android:id="@+id/btnContactVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/calling_video" />
+    <ImageButton
+        android:id="@+id/btnContactEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/calling_edit" />
+
+    <ImageButton
+        android:id="@+id/btnContactMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/calling_message" />
+
+</LinearLayout>

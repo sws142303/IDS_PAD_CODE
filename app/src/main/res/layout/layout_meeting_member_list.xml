@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 会议参会成员信息布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical" >
+    <RelativeLayout
+		android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/set_Meeting_ing_item_height"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/list_1_2">
+    <LinearLayout 
+        android:id="@+id/iv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+        <ImageView
+	        android:id="@+id/iv_image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"        
+	        android:contentDescription="@string/app_name" />
+	    <TextView
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+	        android:id="@+id/tv_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:maxEms="4"
+			android:singleLine="true"
+			android:ellipsize="end"
+	        android:textColor="@color/meeting_selected"
+	        android:textSize="@dimen/set_Meeting_ing_Chronometer_textSize" />
+	    <ImageView
+	        android:id="@+id/iv_pushImage"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"   
+	        android:background="@drawable/videopush"  
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="10dp"
+	        android:contentDescription="@string/app_name"
+	        android:visibility="gone" />
+
+    </LinearLayout>   
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:orientation="horizontal"
+		android:layout_alignParentRight="true">
+		<TextView
+			android:id="@+id/tv_state"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="5dp"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:contentDescription="@string/app_name"
+			android:textSize="@dimen/set_Meeting_ing_Chronometer_textSize"
+			android:maxEms="5"
+			android:singleLine="true"
+			android:ellipsize="end" />
+
+		<Button
+			android:id="@+id/btn_Control"
+			android:background="#66000000"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:layout_marginRight="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			android:focusable="false"
+			android:text="操控"/>
+
+
+	</LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

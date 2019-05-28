@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/set_fragmentmessage_itemtext_height"
+    android:background="@drawable/list_1"
+    android:paddingTop="@dimen/set_fragmentmessage_itemtext_paddingtop"
+    android:paddingRight="@dimen/set_fragmentmessage_itemtext_paddingright"
+    android:paddingBottom="@dimen/set_fragmentmessage_itemtext_paddingbottom"
+    android:paddingLeft="@dimen/set_fragmentmessage_itemtext_paddingleft">
+        
+   
+    <CheckBox 
+        android:id="@+id/txtckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox"
+        android:visibility="gone"
+        />
+    <FrameLayout
+        android:id="@+id/messageTextUserImg"
+        android:layout_width="@dimen/set_fragmentmessage_itemtext_FrameLayout_width"
+        android:layout_height="@dimen/set_fragmentmessage_itemtext_FrameLayout_height"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bighead"
+        android:layout_toRightOf="@id/txtckbox" >
+
+        <TextView
+            android:id="@+id/txtTextMessageCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/dian"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/messageTextTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/messageTextUserImg" >
+
+        <TextView
+            android:id="@+id/txtTextMessageUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/txtTextMessageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" 
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/messageTextBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/messageTextTop"
+        android:layout_below="@id/messageTextTop"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txtTextMessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+    </LinearLayout>
+ </RelativeLayout>
+</RelativeLayout>

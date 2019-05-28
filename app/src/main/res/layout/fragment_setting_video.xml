@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置-视频通话 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingVideoFragment" >
+
+    <RelativeLayout
+        android:id="@+id/rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/set_intercomFragment_paddingleft"
+        android:paddingRight="@dimen/set_intercomFragment_paddingright"
+        android:paddingTop="5dp" >
+			
+        <TextView
+            android:textSize="@dimen/textsize_settingActivity"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="3dp"
+            android:text="@string/title_setting_video_camera"
+            android:textColor="@color/contact_title_selected"
+             />
+
+        <RelativeLayout
+            android:id="@+id/rg_h265"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_camera"
+            android:background="@drawable/setting_radio_bg" >
+
+            <TextView
+                android:id="@+id/tv_h265"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/title_setting_other_enable_h265"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity"/>
+
+            <TextView
+                android:id="@+id/tv_StartUpH265"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/rb_CloseH265"
+                android:text="@string/title_setting_video_startup"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_CloseH265"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="@string/title_setting_video_close"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rg_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_h265"
+            android:background="@drawable/setting_radio_bg" >
+
+            <TextView
+                android:id="@+id/tv_camera1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/title_setting_video_camera_orientation"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity"/>
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/rb_UVC_Camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/title_setting_video_camera_rear"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+
+                <TextView
+                    android:id="@+id/rb_camerafront"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/title_setting_video_camera_front"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+
+                <TextView
+                    android:id="@+id/rb_camerarear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/title_setting_video_camera_rear"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rg_rotate_q"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_camera"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_radio_bg" >
+
+            <TextView
+                android:id="@+id/tv_camera2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/title_setting_video_camera_q"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_0degree_q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/rb_90degree_q"
+                android:text="@string/title_setting_video_camera_rotate0"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_90degree_q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/rb_180degree_q"
+                android:text="@string/title_setting_video_camera_rotate90"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_180degree_q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/rb_270degree_q"
+                android:text="@string/title_setting_video_camera_rotate180"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_270degree_q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="@string/title_setting_video_camera_rotate270"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rg_rotate_h"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_rotate_q"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_radio_bg" >
+
+            <TextView
+                android:id="@+id/tv_camera3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/title_setting_video_camera_h"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_0degree_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/rb_90degree_h"
+                android:text="@string/title_setting_video_camera_rotate0"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_90degree_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/rb_180degree_h"
+                android:text="@string/title_setting_video_camera_rotate90"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_180degree_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/rb_270degree_h"
+                android:text="@string/title_setting_video_camera_rotate180"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/rb_270degree_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="@string/title_setting_video_camera_rotate270"
+                android:textColor="@color/contact_title_unselected"
+                android:textSize="@dimen/textsize_settingActivity" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_videoSendProportion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rg_rotate_h"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_radio_bg" >
+
+          <TextView
+              android:id="@+id/tv_camera4"
+              android:layout_marginLeft="10dp"
+              android:layout_centerVertical="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="视频编码比例设置"
+              android:textColor="@color/contact_title_unselected"
+              android:textSize="@dimen/textsize_settingActivity"/>
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_videoSendProportion_0"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:text="默认"/>
+                <TextView
+                    android:id="@+id/tv_videoSendProportion_1"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:text="4:3"/>
+                <TextView
+                    android:id="@+id/tv_videoSendProportion_2"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:text="16:9"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/re_videoScalingMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/re_videoSendProportion"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_radio_bg" >
+
+          <TextView
+              android:id="@+id/tv_camera5"
+              android:layout_marginLeft="10dp"
+              android:layout_centerVertical="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="视频解码模式设置"
+              android:textColor="@color/contact_title_unselected"
+              android:textSize="@dimen/textsize_settingActivity"/>
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_TO_FIT"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:text="自适应"/>
+                <TextView
+                    android:id="@+id/tv_TO_FIT_WITH_CROPPING"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:text="等比"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_bitrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/re_videoScalingMode"
+            android:background="@drawable/setting_radio_bg" >
+            <TextView
+                android:id="@+id/tv_bitrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:text="@string/title_setting_video_bitrate"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <LinearLayout
+                android:id="@+id/llayout_bitrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/et_bitrate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_settingActivity" >
+                </EditText>
+
+                <Button
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/btn_bitrate"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_save" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout_frameate"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout_bitrate"
+            android:orientation="vertical"
+            android:background="@drawable/setting_radio_bg" >
+
+            <TextView
+                android:id="@+id/tv_framerate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:text="@string/title_setting_video_framerate"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <LinearLayout
+                android:id="@+id/llayout_framerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+                <EditText
+                    android:id="@+id/et_framerate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_settingActivity" >
+                </EditText>
+
+                <Button
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/btn_framerate"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_save" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_sendBuffer"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout_frameate"
+            android:orientation="vertical"
+            android:background="@drawable/setting_radio_bg" >
+
+            <TextView
+                android:id="@+id/tv_sendBuffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:text="@string/title_setting_video_sendBuffer"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <EditText
+                    android:maxLength="5"
+                    android:id="@+id/et_sendBuffer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:inputType="number"
+                    android:text="128"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_settingActivity" >
+                </EditText>
+                <Button
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/btn_sendBuffer"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_save" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_receiveBuffer"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout_sendBuffer"
+            android:orientation="vertical"
+            android:background="@drawable/setting_radio_bg" >
+
+            <TextView
+                android:id="@+id/tv_receiveBuffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:text="@string/title_setting_video_receiveBuffer"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <EditText
+                    android:text="128"
+                    android:maxLength="5"
+                    android:id="@+id/et_receiveBuffer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:inputType="number"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textsize_settingActivity" >
+                </EditText>
+                <Button
+                    android:textSize="@dimen/textsize_settingActivity"
+                    android:id="@+id/btn_receiveBuffer"
+                    android:layout_width="0dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_save" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        <!--
+    <TableLayout 
+    android:id="@+id/tableloyout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/llayout_framerate"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="20dp"
+    android:stretchColumns="0,1"
+    >
+        
+    <TableRow
+        android:id="@+id/tr_nack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_nack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/title_setting_nack"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <CheckBox
+            android:id="@+id/cb_nack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/setting_switch_style"
+            android:gravity="right" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tr_tmmbr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_tmmbr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/title_setting_tmmbr"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <CheckBox
+            android:id="@+id/cb_tmmbr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/setting_switch_style"
+            android:gravity="right" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tr_resolutioncon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_resolutioncon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/title_setting_resolutioncon"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <CheckBox
+            android:id="@+id/cb_resolutioncon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/setting_switch_style"
+            android:gravity="right" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tr_ars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_ars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/title_setting_ARS"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <CheckBox
+            android:id="@+id/cb_ars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/setting_switch_style"
+            android:gravity="right" />
+    </TableRow>
+   
+    </TableLayout>
+     <LinearLayout
+        android:id="@+id/tr_ars_min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableloyout"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+        <TextView
+        android:id="@+id/tv_ars_min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="ARS Min.Br.(30-10000).."
+        android:textColor="@color/contact_title_unselected"
+        android:textSize="@dimen/settingvideo_textsize15" 
+        android:enabled="false"/>
+        <TableRow
+        android:id="@+id/tr_ars_min2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+         <EditText
+			        android:id="@+id/et_ars_min"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"   
+			        android:layout_gravity="center_vertical"    
+			        android:inputType="number"
+			        android:maxLength="5"
+			        android:textColor="@android:color/black"
+			        android:textSize="@dimen/settingvideo_textsize15"  
+			        android:layout_weight="1"
+			        android:text="30"
+			        android:enabled="false">
+		    	</EditText>
+	<Button 
+			        android:id="@+id/btn_ars_min"
+			        android:layout_width="match_parent"
+			        android:layout_height="42dp"
+			        android:layout_gravity="center_vertical"
+			        android:layout_marginLeft="10dp"
+			        android:text="@string/btn_save"
+			        android:textColor="@android:color/white"
+			        android:background="@drawable/btn_login_cancel"
+			        android:layout_weight="3"
+			        android:visibility="gone"/>
+	</TableRow>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/tr_ars_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tr_ars_min"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+         
+        <TextView android:id="@+id/tv_ars_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="ARS Max.Br.(30-10000).."
+        android:textColor="@color/contact_title_unselected"
+        android:textSize="@dimen/settingvideo_textsize15"
+        android:enabled="false" />
+         <TableRow
+        android:id="@+id/tr_ars_min2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+         <EditText
+			        android:id="@+id/et_ars_max"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"   
+			        android:layout_gravity="center_vertical"    
+			        android:inputType="number"
+			        android:maxLength="5"
+			        android:textColor="@android:color/black"
+			        android:textSize="@dimen/settingvideo_textsize15"  
+			        android:layout_weight="1"
+			        android:text="30"
+			        android:enabled="false">
+		 </EditText>
+		<Button 
+			        android:id="@+id/btn_ars_max"
+			        android:layout_width="match_parent"
+			        android:layout_height="42dp"
+			        android:layout_gravity="center_vertical"
+			        android:layout_marginLeft="10dp"
+			        android:text="@string/btn_save"
+			        android:textColor="@android:color/white"
+			        android:background="@drawable/btn_login_cancel"
+			        android:layout_weight="3"
+			        android:visibility="gone"/>
+		</TableRow>
+    </LinearLayout>
+    <LinearLayout 
+	        android:id="@+id/llayout_anr"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/tr_ars_max"
+	        android:orientation="vertical">
+	        
+	        <TextView
+	            android:id="@+id/tv_arncontent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="ANR"
+	            android:textColor="@color/contact_title_unselected"
+		        android:textSize="@dimen/settingvideo_textsize15"  />
+	
+	        <TextView
+	            android:id="@+id/tv_anr"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/setting_textview_style"
+	            android:drawableLeft="@drawable/setting_textspace"
+	            android:drawableRight="@drawable/setting_dropdown"
+	            android:gravity="left|center_vertical"
+	            android:textColor="@android:color/black"
+	            android:textSize="15dp"  />
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/llayout_rxanr"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/llayout_anr"
+	        android:orientation="vertical">
+	        
+	        <TextView
+	            android:id="@+id/tv_rxarncontent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Rx ANR"
+	            android:textColor="@color/contact_title_unselected"
+		        android:textSize="@dimen/settingvideo_textsize15"  />
+	
+	        <TextView
+	            android:id="@+id/tv_rxanr"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/setting_textview_style"
+	            android:drawableLeft="@drawable/setting_textspace"
+	            android:drawableRight="@drawable/setting_dropdown"
+	            android:gravity="left|center_vertical"
+	            android:textColor="@android:color/black"
+	            android:textSize="15dp"  />
+	        
+	    </LinearLayout>
+        -->
+
+        <TextView
+            android:id="@+id/tv_resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/linearlayout_receiveBuffer"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="3dp"
+            android:text="@string/title_setting_video_camera"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/textsize_settingActivity" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_resolution"
+            android:layout_margin="1dp" >
+
+            <RadioGroup
+                android:id="@+id/rg_resolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical" >
+
+                <!--
+            <RadioButton
+                android:id="@+id/rb_resolution1080"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_radio_bg"
+                android:button="@null"
+                android:drawableRight="@drawable/setting_radio_style"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/title_setting_video_resolution_1080P"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/rb_resolution720"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_radio_bg"
+                android:button="@null"
+                android:drawableRight="@drawable/setting_radio_style"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/title_setting_video_resolution_720P"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/rb_resolutionvga"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_radio_bg"
+                android:button="@null"
+                android:drawableRight="@drawable/setting_radio_style"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/title_setting_video_resolution_vga"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/rb_resolutiond1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_radio_bg"
+                android:button="@null"
+                android:drawableRight="@drawable/setting_radio_style"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/title_setting_video_resolution_d1"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/rb_resolutioncif"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_radio_bg"
+                android:button="@null"
+                android:drawableRight="@drawable/setting_radio_style"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/title_setting_video_resolution_cif"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="22sp" />
+
+            <RadioButton
+                android:id="@+id/rb_resolutionqvga"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_radio_bg"
+                android:button="@null"
+                android:drawableRight="@drawable/setting_radio_style"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/title_setting_video_resolution_qvga"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="22sp" />
+                -->
+            </RadioGroup>
+        </ScrollView>
+    </RelativeLayout>
+
+</ScrollView>

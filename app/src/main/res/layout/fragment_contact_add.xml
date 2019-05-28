@@ -1,0 +1,283 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/contact_add_body" >
+
+    <TextView
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/contact_add_bg"
+        android:gravity="center"
+        android:text="@string/title_contact_add"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/surLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_centerVertical="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/title_contact_surname"
+            android:textSize="16sp"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/editSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textSurname"
+            android:inputType="text"
+            android:gravity="center_vertical"
+            android:hint="姓氏" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragment_contact_add_height"
+        android:layout_below="@id/surLayout"
+        android:layout_centerVertical="true" 
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/title_contact_name" 
+            android:textSize="@dimen/set_fragment_contact_add_textSize"
+            android:layout_marginTop="@dimen/set_fragment_contact_add_margin"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textName"
+            android:inputType="text"
+            android:gravity="center_vertical"
+
+            android:textSize="@dimen/set_fragment_contact_add_textSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/companyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragment_contact_add_height"
+        android:layout_below="@id/nameLayout"
+        android:layout_centerVertical="true"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/textCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/set_fragment_contact_add_margin"
+            android:text="@string/title_contact_company"
+            android:textSize="@dimen/set_fragment_contact_add_textSize"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/editCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textCompany"
+            android:inputType="text"
+            android:gravity="center_vertical"
+
+            android:textSize="@dimen/set_fragment_contact_add_textSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ipPhoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragment_contact_add_height"
+        android:layout_below="@id/companyLayout"
+        android:layout_centerVertical="true" 
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/textIpPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/set_fragment_contact_add_margin"
+            android:text="@string/title_contact_ipphone"
+            android:textSize="@dimen/set_fragment_contact_add_textSize"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/editIpPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textIpPhone"
+            android:inputType="number"
+            android:gravity="center_vertical"
+
+            android:textSize="@dimen/set_fragment_contact_add_textSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mobilePhoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragment_contact_add_height"
+        android:layout_below="@id/ipPhoneLayout"
+        android:layout_centerVertical="true"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/textMobilePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/set_fragment_contact_add_margin"
+            android:text="@string/title_contact_mobilephone"
+            android:textSize="@dimen/set_fragment_contact_add_textSize"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/editMobilePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textMobilePhone"
+            android:inputType="number"
+            android:gravity="center_vertical"
+
+            android:textSize="@dimen/set_fragment_contact_add_textSize" />
+    </RelativeLayout>
+     <RelativeLayout
+        android:id="@+id/OfficePhoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragment_contact_add_height"
+        android:layout_below="@id/mobilePhoneLayout"
+        android:layout_centerVertical="true"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/textOfficePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/set_fragment_contact_add_margin"
+            android:text="@string/title_contact_officephone"
+            android:textSize="@dimen/set_fragment_contact_add_textSize"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/editOfficePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textOfficePhone"
+            android:inputType="number"
+            android:gravity="center_vertical"
+
+            android:textSize="@dimen/set_fragment_contact_add_textSize" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/HousePhoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragment_contact_add_height"
+        android:layout_below="@id/OfficePhoneLayout"
+        android:layout_centerVertical="true"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/textHousePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/set_fragment_contact_add_margin"
+            android:text="@string/title_contact_housephone"
+            android:textSize="@dimen/set_fragment_contact_add_textSize"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/editHousePhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textHousePhone"
+            android:inputType="number"
+            android:gravity="center_vertical"
+
+            android:textSize="@dimen/set_fragment_contact_add_textSize" />
+    </RelativeLayout>
+	<RelativeLayout
+        android:id="@+id/EmailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragment_contact_add_height"
+        android:layout_below="@id/HousePhoneLayout"
+        android:layout_centerVertical="true"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/set_fragment_contact_add_margin"
+            android:text="@string/title_contact_email"
+            android:textSize="@dimen/set_fragment_contact_add_textSize"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/textEmail"
+            android:inputType="textEmailAddress"
+            android:gravity="center_vertical"
+
+            android:textSize="@dimen/set_fragment_contact_add_textSize"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnContactAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/set_fragment_contact_add_button_height"
+        android:layout_below="@id/EmailLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_calling_click"
+        android:text="@string/btn_save" />
+
+    <Button
+        android:id="@+id/btnContactCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/set_fragment_contact_add_button_height"
+        android:layout_below="@id/btnContactAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btn_calling_click"
+        android:text="@string/btn_cancel" />
+
+</RelativeLayout>

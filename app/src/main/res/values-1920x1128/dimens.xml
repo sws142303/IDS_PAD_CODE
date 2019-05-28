@@ -1,0 +1,309 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Login screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_login_horizontal_margin">235dp</dimen>
+    <dimen name="activity_login_top_margin">200dp</dimen>
+    <dimen name="activity_login_bottom_margin">0dp</dimen>
+    <dimen name="settingvideo_textsize15">14sp</dimen>
+    <dimen name="set_EditText_height">38dp</dimen>
+    <dimen name="set_button_width">115dp</dimen>
+    <dimen name="set_button_height">30dp</dimen>
+    <dimen name="set_fontSize">18sp</dimen>
+    <dimen name="set_fontSize_domn">15sp</dimen>
+    <dimen name="set_drawablePadding">15dp</dimen>
+    <dimen name="set_drawableico_width">30dp</dimen>
+    <dimen name="set_drawableico_height">30dp</dimen>
+    <!-- 公共 -->
+    <dimen name="set_calling_width">50dp</dimen>
+    <!-- 主界面左侧 -->
+    <dimen name="set_mainLeft">120dip</dimen>
+    <dimen name="set_topheight">55.0dip</dimen>
+    <dimen name="set_downheight">35.0dip</dimen>
+    <dimen name="set_miandownButton_height">25dp</dimen>
+    <dimen name="set_btn_one_width">20dp</dimen>
+    <dimen name="set_btn_one_height">20dp</dimen>
+    <dimen name="set_btn_four_width">20dp</dimen>
+    <dimen name="set_btn_four_height">20dp</dimen>
+    <dimen name="set_btn_nine_width">20dp</dimen>
+    <dimen name="set_btn_nine_height">20dp</dimen>
+     <dimen name="set_linerloayout_margintop">5dp</dimen>
+    <dimen name="set_button_marginleft">5dp</dimen>
+    <dimen name="login_usernameTopTextViewHeight">33dp</dimen>
+    <dimen name="main_zhuizongPopEditTextwidth">220dp</dimen>
+    <dimen name="set_layout_zhuizong">275dp</dimen>
+    <!-- GIS地图开始 -->
+    <dimen name="set_linerLayout_width">70dp</dimen>
+    <dimen name="set_linerLayout_height">23dp</dimen>
+    <dimen name="set_textSize">14sp</dimen>
+    <dimen name="set_marginBottom">2dp</dimen>
+    <dimen name="set_bottomTextViewheight">20dp</dimen>
+    <dimen name="set_layout_pos_multiple_height">25dp</dimen>
+    <dimen name="set_layout_pos_multiple_width">159dp</dimen>
+    <dimen name="set_layout_pos_filter_height">180dp</dimen>
+    <dimen name="set_layout_pos_filter_width">180dp</dimen>
+    <dimen name="set_layout_pos_filter_textSize">12sp</dimen>
+    <dimen name="set_layout_pos_filter_spRange_height">40dp</dimen>
+    <dimen name="set_layout_pos_filter_checkbox_marginleft">5dp</dimen>
+     <dimen name="layuot_pos_track_spinner">110dp</dimen>
+     <dimen name="layuot_pos_trace_spinner">210dp</dimen>
+    <!-- 地图弹出框定位 -->
+    <dimen name="set_layout_pos_trace_top">0dp</dimen>
+    <dimen name="set_layout_pos_trace_left">0dp</dimen>
+    <dimen name="set_layout_pos_trace_right">65dp</dimen>
+    <dimen name="set_layout_pos_trace_bottom">45dp</dimen>
+    <dimen name="set_layout_pos_filter_marginTop">5dp</dimen>
+    <dimen name="set_layout_pos_filter_marginLeft">7dp</dimen>
+    <dimen name="set_layout_pos_filter_track_main_height">160dp</dimen>
+    <dimen name="set_layout_pos_filter_track_main_width">300dp</dimen>
+    <dimen name="set_layout_pos_filter_track_height">200dp</dimen>
+    <dimen name="set_layout_pos_filter_track_width">100dp</dimen>
+    <dimen name="set_layout_pos_filter_track_LinearLayout_height">200dp</dimen>
+    <dimen name="set_layout_pos_filter_track_linerMarginTop">15dp</dimen>
+    <dimen name="set_layout_pos_filter_track_editTrackUserNo_width">130dp</dimen>
+    <dimen name="set_layout_pos_filter_track_liner_margintop">10dp</dimen>
+    <dimen name="set_layout_pos_filter_track_trackBeginDate_width">80dp</dimen>
+    <dimen name="set_layout_pos_filter_track_trackBeginDate_margintop">10dp</dimen>
+    <dimen name="set_layout_pos_filter_track_trackBeginTime_width">80dp</dimen>
+    <dimen name="set_layout_pos_filter_track_trackEndDate_width">70dp</dimen>
+    <dimen name="set_layout_pos_filter_track_textSize">12sp</dimen>
+    <dimen name="set_layout_pos_filter_trackeEditText_width">40dp</dimen>
+    <dimen name="layoutmarginTop">98dp</dimen>
+    <dimen name="layoutmarginLeft">220dp</dimen>
+    <dimen name="layoutmarginRight">65dp</dimen>
+    <dimen name="layoutmarginBottom">35dp</dimen>
+    <dimen name="checklinearlayout_width">74dp</dimen>
+    <dimen name="set_layout_pos_trace_main_heigth">160dp</dimen>
+    <dimen name="set_layout_pos_trace_top_heigth">35dp</dimen>
+    <dimen name="set_layout_pos_trace_ListView_heigth">60dp</dimen>
+     <dimen name="set_layout_pos_trace_ListView_width">80dp</dimen>
+     <dimen name="set_layout_pos_trace_bottom_height">35dp</dimen>
+    <dimen name="pos_listitem_width">209dp</dimen>
+    <dimen name="pos_listitem_height">190dp</dimen>
+    <!-- GIS地图结束 -->
+    <!-- 对讲 -->
+    <dimen name="rightbottommarginright">4dp</dimen>
+    <dimen name="set_leftdown">200dp</dimen>
+    <dimen name="set_intercomBtnsize">100dp</dimen>
+    <dimen name="set_tv_queuing_fontsize">14sp</dimen>
+    <dimen name="set_tv_queuingvl_fontsize">14sp</dimen>
+    <dimen name="set_tv_speaker_fontsize">14sp</dimen>
+    <dimen name="set_tv_speakervl_fontsize">14sp</dimen>
+    <dimen name="set_tv_states_fontsize">14sp</dimen>
+    <dimen name="set_tv_statesvl_fontsize">14sp</dimen>
+    <dimen name="set_tv_group_fontsize">14sp</dimen>
+    <dimen name="set_tv_groupv1_fontsize">14sp</dimen>
+    <dimen name="set_groupname_fontsize">12sp</dimen>
+    <dimen name="set_item_height">35dp</dimen>
+    <dimen name="set_itemChild_height">28dp</dimen>
+    <dimen name="set_itemChildusername_Height">12sp</dimen>
+    <dimen name="set_itemChilduserstate_Height">12sp</dimen>
+    <dimen name="set_head_marginLeft">20dp</dimen>
+    <dimen name="set_jiantou_marginRight">2dp</dimen>
+    <dimen name="set_groupname_marginLeft">5dp</dimen>
+    <!-- 通话左侧 -->
+    <dimen name="setleft_width_liner">370dp</dimen>
+    <dimen name="setleft_height_liner">20dp</dimen>
+    <dimen name="setleft_marginLeft">125dp</dimen>
+    <dimen name="setleft_deleteico_width">15dp</dimen>
+    <dimen name="setleft_deleteico_height">15dp</dimen>
+    <dimen name="setleft_checkbox_width">25dp</dimen>
+    <dimen name="setleft_textsize_number">11sp</dimen>
+    <dimen name="setleft_textsize_date">11sp</dimen>
+    <dimen name="setleft_btndelete_heigth">20dp</dimen>
+    <dimen name="setleft_btndelete_marginleft">35dp</dimen>
+    <dimen name="setleft_calling_userimg_width">20dp</dimen>
+    <dimen name="setleft_calling_userimg_heigth">20dp</dimen>
+    <dimen name="setleft_calling_numEditText_height">30dp</dimen>
+    <dimen name="setleft_calling_btnBackup_width">40dp</dimen>
+    <dimen name="setleft_calling_btnBackup_height">35dp</dimen>
+    <!-- 通话记录每一项的高度 -->
+    <dimen name="setleft_callingitem_height">45dp</dimen>
+    <!-- 通话记录复选框的宽度 -->
+    <dimen name="setleft_callingitem_ckbox_width">20dp</dimen>
+    <!-- 通话记录中头像marginleft -->
+    <dimen name="setleft_callingitem_calling_userimg_marginleft">5dp</dimen>
+    <!-- 通话记录中文字margintop -->
+    <dimen name="setleft_callingitem_calling_item_top_margintop">5dp</dimen>
+    <!-- 通话记录中底部键盘区高度 -->
+    <dimen name="setleft_calling_btnKeyboardShow_height">35dp</dimen>
+    <dimen name="calling_btn_linearlayout_height">130dp</dimen>
+    <!-- 通话中本地 开始-->
+    <dimen name="setleft_calling_txtOutUserNo_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_session_time_state_fontSize">12sp</dimen>
+    <dimen name="setleft_calling_callingLocalViewFrame_height">140dp</dimen>
+    <dimen name="setleft_calling_callingLocalViewAudio_height">200dp</dimen>
+    <dimen name="setleft_calling_txtAudioUserName_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_txtAudioUserNo_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_session_time_state_audio_fontSize">14sp</dimen>
+
+     <!-- 视频信息开始 -->
+    <dimen name="setleft_calling_videoUserName_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_videoUserNo_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_videoUserTime_fontSize">14sp</dimen>
+    <!-- 视频信息结束 -->
+    <!-- 按钮开始 -->
+    <dimen name="setleft_calling_btnHangUp_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_btnVoiceAnswer_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_btnVideoAnswer_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_btnDecline_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_btnHandsFree_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_btnMute_fontSize">14sp</dimen>
+     <dimen name="setleft_calling_btnHoldon_fontSize">14sp</dimen>
+    <dimen name="setleft_calling_btnInviteJoin_fontSize">14sp</dimen>
+
+    <dimen name="setleft_calling_btnHangUp_margintop">10dp</dimen>
+    <dimen name="setleft_calling_btnVoiceAnswer_margintop">10dp</dimen>
+    <dimen name="setleft_calling_btnVideoAnswer_margintop">10dp</dimen>
+    <dimen name="setleft_calling_btnDecline_margintop">5dp</dimen>
+    <dimen name="setleft_calling_btnHandsFree_margintop">5dp</dimen>
+    <dimen name="setleft_calling_btnMute_margintop">5dp</dimen>
+     <dimen name="setleft_calling_btnHoldon_margintop">5dp</dimen>
+    <dimen name="setleft_calling_btnInviteJoin_margintop">5dp</dimen>
+
+    <dimen name="setleft_calling_btnHangUp_width">120dp</dimen>
+    <dimen name="setleft_calling_btnHangUp_height">25dp</dimen>
+    <dimen name="setleft_calling_btnVoiceAnswer_width">120dp</dimen>
+    <dimen name="setleft_calling_btnVoiceAnswer_height">25dp</dimen>
+    <dimen name="setleft_calling_btnVideoAnswer_width">120dp</dimen>
+    <dimen name="setleft_calling_btnVideoAnswer_height">25dp</dimen>
+    <dimen name="setleft_calling_btnDecline_width">120dp</dimen>
+    <dimen name="setleft_calling_btnDecline_height">25dp</dimen>
+    <dimen name="setleft_calling_btnHandsFree_width">120dp</dimen>
+    <dimen name="setleft_calling_btnHandsFree_height">25dp</dimen>
+    <dimen name="setleft_calling_btnMute_width">120dp</dimen>
+    <dimen name="setleft_calling_btnMute_height">25dp</dimen>
+     <dimen name="setleft_calling_btnHoldon_width">120dp</dimen>
+     <dimen name="setleft_calling_btnHoldon_height">25dp</dimen>
+    <dimen name="setleft_calling_btnInviteJoin_width">120dp</dimen>
+    <dimen name="setleft_calling_btnInviteJoin_height">25dp</dimen>
+     <dimen name="setleft_calling_btnGone_width">60dp</dimen>
+    <dimen name="setleft_calling_btnGone_height">25dp</dimen>
+    <dimen name="setleft_calling_alldownbtn_textSize">10sp</dimen>
+    <dimen name="setleft_main_ll_pos_width">350dp</dimen>
+    <dimen name="setleft_main_ll_pos_height">35dp</dimen>
+    <!-- 按钮开始 -->
+    <!-- 通话中本地 结束-->
+     <!-- 键盘部分 -->
+    <dimen name="setleft_calling_callingKeyboardToolLayout_height">35dp</dimen>
+    <dimen name="setleft_calling_layout_keyboardtop_height">38dp</dimen>
+    <dimen name="setleft_calling_keyboardbuttom_height">35dp</dimen>
+     <dimen name="setleft_inputkey_height">61dp</dimen>
+    <!-- 键盘部分 -->
+     <!-- 会议开始 -->
+    <dimen name="set_Meetinglinerlayout_height">34.0dip</dimen>
+     <dimen name="set_Meetingtv_local_textSize">12.0dip</dimen>
+    <dimen name="set_Meetingtv_system_textSize">12.0dip</dimen>
+    <dimen name="set_Meeting_btn_voice_textSize">12.0dip</dimen>
+    <dimen name="set_Meeting_btn_video_textSize">12.0dip</dimen>
+    <dimen name="set_Meeting_btn_broadcast_textSize">12.0dip</dimen>
+    <dimen name="set_Meeting_tv_seleced_textSize">12.0dip</dimen>
+    <dimen name="set_Meeting_button_width">120dp</dimen>
+    <dimen name="set_Meeting_button_height">25dp</dimen>
+    <dimen name="set_Meeting_bottom">35dp</dimen>
+    <dimen name="set_Meeting_btn_keyboard_hideplate_width">22dp</dimen>
+    <dimen name="set_Meeting_btn_keyboard_hideplate_height">22dp</dimen>
+    <dimen name="set_Meeting_btn_keyboard_complete_width">68dp</dimen>
+    <dimen name="set_Meeting_btn_keyboard_complete_height">25dp</dimen>
+    <dimen name="set_Meeting_btn_keyboard_complete_textSize">12.0dip</dimen>
+     <dimen name="set_Meeting_rl_keyboard_input_height">35dp</dimen>
+     <dimen name="set_MeetingSystemFragment_height">30dp</dimen>
+    <dimen name="set_MeetingSystemFragment_marginLeft">10dp</dimen>
+    <dimen name="set_MeetingSystemFragment_textSize">12sp</dimen>
+    <dimen name="set_MeetingLocalFragment_textSize">12sp</dimen>
+     <dimen name="set_MeetingLocalFragment_height">30dp</dimen>
+    <dimen name="set_Meeting_tv_phoneNo_textSize">10sp</dimen>
+    <!-- 会议中布局 -->
+    <dimen name="set_Meeting_ing_height">24.0dip</dimen>
+    <dimen name="set_Meeting_ing_textView_textSize">14sp</dimen>
+    <dimen name="set_Meeting_ing_Chronometer_textSize">12sp</dimen>
+    <dimen name="set_Meeting_ing_fl_meeting_camera_height">130.0dip</dimen>
+    <dimen name="set_Meeting_ing_item_height">25dp</dimen>
+    <!-- 会议结束 -->
+     <!-- 消息开始 -->
+    <dimen name="set_fragmentMessage_botom_height">36dp</dimen>
+    <dimen name="set_fragmentmessage_new_topheight">60dp</dimen>
+    <dimen name="set_fragmentmessage_new_txtNewRelativeLayout_height">40dp</dimen>
+    <dimen name="set_fragmentmessage_new_txtNewRelativeLayout_marginleft">5dp</dimen>
+    <dimen name="set_fragmentmessage_new_txtNewRelativeLayout_marginright">5dp</dimen>
+    <dimen name="set_fragmentmessage_new_message_new_foot_height">35dp</dimen>
+    <dimen name="set_fragmentmessage_new_txtMessageBoday_height">30dp</dimen>
+    <dimen name="set_fragmentmessage_new_btnMessageSend_width">55dp</dimen>
+    <dimen name="set_fragmentmessage_new_btnMessageSend_height">30dp</dimen>
+    <dimen name="set_fragment_contact_new_textSize">12sp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_height">45dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_paddingleft">5dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_paddingright">5dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_paddingtop">5dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_paddingbottom">5dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_CheckBox_width">15dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_CheckBox_height">15dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_FrameLayout_height">20dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_FrameLayout_width">20dp</dimen>
+    <dimen name="set_fragmentmessage_itemtext_textSize">12sp</dimen>
+
+    <dimen name="set_fragmentmessage_show_layoutMessageTop_height">40dp</dimen>
+    <dimen name="set_fragmentmessage_show_btnBack_height">35dp</dimen>
+    <dimen name="set_fragmentmessage_show_btnBack_width">35dp</dimen>
+    <dimen name="set_fragmentmessage_show_txtMessageUserNo_textSize">14sp</dimen>
+    <dimen name="set_fragmentmessage_show_txtMessageUserNo_marinleft">60dp</dimen>
+    <dimen name="set_fragmentmessage_show_message_edit_layout_height">40dp</dimen>
+    <dimen name="set_fragmentmessage_show_message_edit_layout_marginleft">5dp</dimen>
+    <dimen name="set_fragmentmessage_show_message_edit_layout_marginright">5dp</dimen>
+    <dimen name="set_fragmentmessage_show_message_new_foot_height">36dp</dimen>
+    <dimen name="set_fragmentmessage_show_messagebtnsend_height">30dp</dimen>
+    <dimen name="set_fragmentmessage_show_messagebtnsend_width">55dp</dimen>
+    <dimen name="set_fragmentmessage_show_messageBody_height">30dp</dimen>
+    <!-- 消息结束 -->
+    <!-- 通讯录开始 -->
+    <dimen name="set_activity_contact_ll_tab_height">35.0dip</dimen>
+    <dimen name="set_activity_contact_topmuen_textSize">14sp</dimen>
+    <dimen name="set_activity_contact_ll_oper_height">36dp</dimen>
+    <dimen name="set_activity_contact_ll_oper_marginleft">5dp</dimen>
+    <dimen name="set_activity_contact_ll_oper_marginright">5dp</dimen>
+    <dimen name="set_activity_contact_btn_add_width">30dp</dimen>
+    <dimen name="set_activity_contact_btn_add_height">30dp</dimen>
+    <dimen name="set_activity_contact_et_nmornb_height">30dp</dimen>
+    <dimen name="set_activity_contact_et_nmornb_marginleft">5dp</dimen>
+    <dimen name="set_activity_contact_et_nmornb_textSize">12sp</dimen>
+    <dimen name="set_fragment_contact_add_height">35dp</dimen>
+     <dimen name="set_fragment_contact_add_textSize">12sp</dimen>
+    <dimen name="set_fragment_contact_add_margin">8dp</dimen>
+    <dimen name="set_fragment_contact_add_button_height">30dp</dimen>
+    <dimen name="set_layout_contact_height">40dp</dimen>
+    <dimen name="set_layout_contact_iv_image_width">20dp</dimen>
+    <dimen name="set_layout_contact_iv_image_height">20dp</dimen>
+    <dimen name="set_layout_contact_tv_title_textsize">12sp</dimen>
+    <dimen name="set_layout_contact_tv_title_width">160dp</dimen>
+    <dimen name="set_layout_contact_tv_phoneNo_textsize">10sp</dimen>
+    <!-- 通讯录结束 -->
+     <!-- 定位开始 -->
+    <dimen name="set_activity_Position_muen_height">34.0dip</dimen>
+    <dimen name="set_activity_Position_textSize">14sp</dimen>
+    <dimen name="set_activity_Position_tv_title_width">240dp</dimen>
+    <!-- 定位结束 -->
+     <!-- 监控开始 -->
+    <dimen name="set_activity_monitor_muen_height">34.0dip</dimen>
+    <dimen name="set_activity_monitor_textSize">14sp</dimen>
+    <!-- 监控结束 -->
+    <!-- 配置开始 -->
+     <dimen name="textsize_settingActivity">10dp</dimen>
+    <dimen name="set_activity_setting_width">80dip</dimen>
+    <dimen name="set_activity_setting_textSize">14sp</dimen>
+     <dimen name="set_activity_button_height">40dp</dimen>
+     <dimen name="set_dipatchsetting_paddingleft">50dp</dimen>
+     <dimen name="set_dipatchsetting_paddingright">50dp</dimen>
+     <dimen name="set_dipatchsetting_paddingtop">50dp</dimen>
+     <dimen name="set_dipatchsetting_textSize">18sp</dimen>
+     <dimen name="set_dipatchsetting_textSize2">14sp</dimen>
+      <dimen name="set_intercomFragment_textSize">14sp</dimen>
+       <dimen name="set_intercomFragment_padding">5dp</dimen>
+       <dimen name="set_intercomFragment_paddingleft">2dp</dimen>
+    <dimen name="set_intercomFragment_paddingright">0dp</dimen>
+    <dimen name="set_intercomFragment_paddingtop">20dp</dimen>
+    <dimen name="set_intercomFragment_muen_height">30dp</dimen>
+    <dimen name="set_intercomFragment_muen_textSize">14sp</dimen>
+    <!-- 配置结束 -->
+</resources>

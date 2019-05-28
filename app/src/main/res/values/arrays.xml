@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="range">
+        <item>一公里</item>
+        <item>两公里</item>
+        <item>三公里</item>
+        <item>四公里</item>
+    </string-array>
+</resources>

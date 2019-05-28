@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置-对讲通话已废除 -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tl_intercom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/set_intercomFragment_paddingleft"
+    android:paddingRight="@dimen/set_intercomFragment_paddingright"
+    android:paddingTop="@dimen/set_intercomFragment_paddingtop"
+    android:stretchColumns="1">
+
+    <TableRow android:gravity="center_vertical" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_highpriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_highpriority"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <Spinner
+            android:id="@+id/sp_highpriorityvl"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:prompt="@string/title_setting_intercom_highpriority"
+            android:textColor="@color/contact_title_unselected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+    </TableRow>
+
+    <TableRow android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_samepriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_samepriority"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <Spinner
+            android:id="@+id/sp_samepriorityvl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/title_setting_intercom_samepriority"
+            android:textColor="@color/contact_title_unselected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+    </TableRow>
+
+    <TableRow android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_lowpriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_lowpriority"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <Spinner
+            android:id="@+id/sp_lowpriorityvl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/title_setting_intercom_lowpriority"
+            android:textColor="@color/contact_title_unselected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+    </TableRow>
+
+    <TableRow android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_defaultgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_defaultgroup"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <Spinner
+            android:id="@+id/sp_defaultgroupvl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/title_setting_intercom_defaultgroup"
+            android:textColor="@color/contact_title_unselected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+    </TableRow>
+
+    <TableRow android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_ringtone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/title_setting_intercom_ringtone"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+        <Spinner
+            android:id="@+id/sp_ringtonevl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/title_setting_intercom_ringtone"
+            android:textColor="@color/contact_title_unselected"
+            android:textSize="@dimen/set_dipatchsetting_textSize2" />
+    </TableRow>
+
+</TableLayout>

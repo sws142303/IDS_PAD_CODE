@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+<contents>
+	<resolution>176*144</resolution>
+	<bitrate>128</bitrate>	
+</contents>
+<contents>
+	<resolution>320*240</resolution>
+	<bitrate>384</bitrate>	
+</contents>
+<contents>
+	<resolution>352*288</resolution>
+	<bitrate>384</bitrate>	
+</contents>
+<contents>
+	<resolution>480*320</resolution>
+	<bitrate>576</bitrate>	
+</contents>
+<contents>
+	<resolution>480*368</resolution>
+	<bitrate>576</bitrate>	
+</contents>
+<contents>
+	<resolution>640*480</resolution>
+	<bitrate>576</bitrate>	
+</contents>
+<contents>
+	<resolution>720*480</resolution>
+	<bitrate>768</bitrate>	
+</contents>
+<contents>
+	<resolution>800*480</resolution>
+	<bitrate>768</bitrate>	
+</contents>
+<contents>
+	<resolution>800*600</resolution>
+	<bitrate>1024</bitrate>	
+</contents>
+<contents>
+	<resolution>864*480</resolution>
+	<bitrate>1024</bitrate>	
+</contents>
+<contents>
+	<resolution>960*540</resolution>
+	<bitrate>1024</bitrate>	
+</contents>
+<contents>
+	<resolution>1280*720</resolution>
+	<bitrate>1520</bitrate>	
+</contents>
+<contents>
+	<resolution>1920*1080</resolution>
+	<bitrate>2048</bitrate>	
+</contents>
+</content>

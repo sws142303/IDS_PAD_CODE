@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 会议页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    tools:context=".MeetingActivity" >
+
+    <FrameLayout
+        android:id="@+id/meeting_frame"
+        android:layout_width="@dimen/setleft_width_liner"
+        android:layout_height="match_parent" >
+
+        <!-- 发起会议-成员列表 -->
+
+        <LinearLayout
+            android:id="@+id/ll_List"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_Meetinglinerlayout_height"
+                android:background="@color/contact_title_bg" >
+
+                <TextView
+                    android:id="@+id/tv_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:drawableBottom="@drawable/tab_seleted"
+                    android:gravity="center"
+                    android:text="@string/title_contact_local"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/set_Meetingtv_local_textSize" />
+
+                <TextView
+                    android:id="@+id/tv_system"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:drawableBottom="@drawable/tab_unseleted"
+                    android:gravity="center"
+                    android:text="@string/title_contact_system"
+                    android:textColor="@color/contact_title_unselected"
+                    android:textSize="@dimen/set_Meetingtv_system_textSize" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@color/intercom_list_bg"
+                android:flipInterval="30"
+                android:persistentDrawingCache="animation" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_seleced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/title_meeting_seleced"
+                    android:textSize="@dimen/set_Meeting_tv_seleced_textSize" />
+
+                <ListView
+                    android:id="@+id/lv_seleced"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/layout_meeting_style"
+                    android:cacheColorHint="#00000000"
+                    android:fastScrollEnabled="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp" >
+
+                <Button
+                    android:id="@+id/btn_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_meeting_voice"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_btn_voice_textSize" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+                <Button
+                    android:id="@+id/btn_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_meeting_video"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_btn_video_textSize" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder2"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+                <Button
+                    android:id="@+id/btn_broadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_meeting_broadcast"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_btn_broadcast_textSize" />
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/page_footer"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btn_showplate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialplate" />
+            </LinearLayout> -->
+
+            <Button
+                android:id="@+id/btn_showplate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_Meeting_bottom"
+                android:background="@drawable/keyboard_show"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+        <!-- 会议中 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_meeting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/meeting_meeting_bg"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/ll_meeting_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_Meeting_ing_height"
+                android:layout_alignParentTop="true"
+                android:background="@color/contact_title_bg" >
+
+                <TextView
+                    android:id="@+id/tv_meeting_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="5dp"
+                    android:text="@string/title_meeting_voicing"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+
+                <Chronometer
+                    android:id="@+id/session_time_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:textAppearance="?android:attr/textAppearance"
+                    android:textColor="@color/contact_title_selected"
+                    android:textSize="@dimen/set_Meeting_ing_Chronometer_textSize" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_meeting_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_meeting_title"
+                android:background="@color/contact_title_bg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <FrameLayout
+                    android:id="@+id/fl_meeting_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_Meeting_ing_fl_meeting_camera_height" >
+
+                    <!--
+                    <SurfaceView
+                    android:id="@+id/mLocalView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                    -->
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_meeting_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp" >
+
+                <Button
+                    android:id="@+id/btn_hangup"
+                    android:layout_width="@dimen/set_Meeting_button_width"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_hangup"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder3"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+                <Button
+                    android:id="@+id/btn_offline"
+                    android:layout_width="@dimen/set_Meeting_button_width"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_holdon"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder4"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+                <Button
+                    android:id="@+id/btn_handsfree"
+                    android:layout_width="@dimen/set_Meeting_button_width"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_handsfree"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder5"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+                <Button
+                    android:id="@+id/btn_mute"
+                    android:layout_width="@dimen/set_Meeting_button_width"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_mute"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder6"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_member"
+                    android:layout_width="@dimen/set_Meeting_button_width"
+                    android:layout_height="@dimen/set_Meeting_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_member"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_meeting_control"
+                android:layout_below="@id/ll_meeting_camera"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:id="@+id/tv_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/title_meeting_principles"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+
+                <ListView
+                    android:id="@+id/lv_members"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fastScrollEnabled="true" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 邀请入会 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_append"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/meeting_meeting_bg"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/ll_append_showplate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_Meeting_bottom"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/page_footer"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btn_append_showplate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dialplate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_append_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_append_showplate"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" >
+
+                <Button
+                    android:id="@+id/btn_append_ok"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_ok"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+
+                <TextView
+                    android:id="@+id/tv_placeholder7"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+                <Button
+                    android:id="@+id/btn_append_cancel"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_append_selecedlist"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_above="@id/ll_append_control"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_append_seleced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="@string/title_meeting_seleced"
+                    android:textSize="@dimen/set_Meeting_ing_textView_textSize" />
+
+                <ListView
+                    android:id="@+id/lv_append_seleced"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="#00000000"
+                    android:fastScrollEnabled="true" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_append_alllist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/ll_append_selecedlist"
+                android:layout_alignParentTop="true"
+                android:cacheColorHint="#00000000"
+                android:fastScrollEnabled="true" />
+        </RelativeLayout>
+        <!-- 键盘输入 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/meeting_keyboard_bg"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/rl_keyboard_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_Meeting_rl_keyboard_input_height"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/btn_keyboard_delete"
+                    android:layout_width="@dimen/setleft_calling_btnBackup_width"
+                    android:layout_height="@dimen/setleft_calling_btnBackup_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/plate_delete" />
+
+                <EditText
+                    android:textSize="15sp"
+                    android:id="@+id/txt_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setleft_inputkey_height"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/btn_keyboard_delete"
+                    android:background="@drawable/metting_edit_bg"
+                    android:inputType="number"
+                    android:paddingTop="2dp" />
+            </RelativeLayout>
+
+            <!--<android.inputmethodservice.KeyboardView
+                android:id="@+id/keyboard_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_keyboard_input"
+                android:background="@color/meeting_keyboard_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keyTextColor="@color/white"
+                android:visibility="gone" /> -->
+
+            <LinearLayout
+                android:id="@+id/metting_linearlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/calling_btn_linearlayout_height"
+                android:layout_below="@id/rl_keyboard_input"
+                android:background="@color/meeting_keyboard_bg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_metting_one"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_one" />
+
+                    <Button
+                        android:id="@+id/btn_metting_two"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_two" />
+
+                    <Button
+                        android:id="@+id/btn_metting_three"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_metting_four"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_four" />
+
+                    <Button
+                        android:id="@+id/btn_metting_five"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_five" />
+
+                    <Button
+                        android:id="@+id/btn_metting_six"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_six" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_metting_seven"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_seven" />
+
+                    <Button
+                        android:id="@+id/btn_metting_eight"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_eight" />
+
+                    <Button
+                        android:id="@+id/btn_metting_nine"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_nine" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_metting_xing"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_xing" />
+
+                    <Button
+                        android:id="@+id/btn_metting_ling"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_ling" />
+
+                    <Button
+                        android:id="@+id/btn_metting_jing"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_calling_jing" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_keyboard_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/set_Meeting_bottom"
+                android:layout_below="@id/metting_linearlayout"
+                android:layout_centerInParent="true"
+                android:background="@drawable/page_footer"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/btn_keyboard_hideplate"
+                    android:layout_width="@dimen/set_Meeting_btn_keyboard_hideplate_width"
+                    android:layout_height="@dimen/set_Meeting_btn_keyboard_hideplate_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/plate_hide" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_complete"
+                    android:layout_width="@dimen/set_Meeting_btn_keyboard_complete_width"
+                    android:layout_height="@dimen/set_Meeting_btn_keyboard_complete_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_ok"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/set_Meeting_btn_keyboard_complete_textSize" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/callingRemoteViewLayout_meeting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/meeting_frame"
+        android:background="@drawable/monitor_bg">
+
+        <RelativeLayout
+            android:id="@+id/relativeMeeting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setleft_calling_keyboardbuttom_height"
+            android:background="@drawable/position_bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:id="@+id/btnGone_meeting"
+                android:layout_width="@dimen/setleft_calling_btnGone_width"
+                android:layout_height="@dimen/setleft_calling_btnGone_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/pos_gone_click"
+                android:text="@string/btn_position_gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_meetingSplitScreen"
+                    android:background="@drawable/position_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="分屏"
+                    android:textSize="@dimen/setleft_calling_alldownbtn_textSize"/>
+                <Button
+                    android:id="@+id/btn_MeetingStartDecode"
+                    android:background="@drawable/position_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="开始上墙"
+                    android:textSize="@dimen/setleft_calling_alldownbtn_textSize"/>
+                <Button
+                    android:id="@+id/btn_MeetingEndDecode"
+                    android:background="@drawable/position_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="取消上墙"
+                    android:textSize="@dimen/setleft_calling_alldownbtn_textSize"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+        <FrameLayout
+            android:layout_above="@id/relativeMeeting"
+            android:id="@+id/callingRemoteViewFrame_meeting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <SurfaceView
+                android:id="@+id/surfaceview_meeting"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/linearlayout_callInfo_meetingMCU"
+                    android:background="#66000000"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="语音"/>
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="视频"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下行丢包"/>
+                        <TextView
+                            android:id="@+id/voice_Downlink_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Downlink_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:text="上行丢包"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/voice_Uplink_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Uplink_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="双向时延"/>
+                        <TextView
+                            android:id="@+id/voice_Bidirectionaldelay_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Bidirectionaldelay_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:text="下行带宽"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/voice_downstreambandwidth_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_downstreambandwidth_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:text="上行带宽"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/voice_Uplinkbandwidth_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Uplinkbandwidth_meetingMCU"
+                            android:textColor="#ffffff"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- 视频信息显示 -->
+                <LinearLayout
+                    android:id="@+id/callingRemoteViewFrameInfo_meeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/linearlayout_callInfo_meetingMCU"
+                    android:background="@drawable/message_bg"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_monitor_name"
+                            android:textColor="@color/contact_title_selected" />
+
+                        <TextView
+                            android:id="@+id/videoUserName_meeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_monitor_no"
+                            android:textColor="@color/contact_title_selected" />
+
+                        <TextView
+                            android:id="@+id/videoUserNo_meeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_monitor_duration"
+                            android:textColor="@color/contact_title_selected" />
+
+                        <Chronometer
+                            android:id="@+id/videoUserTime_meeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearance"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+        <!-- 工具栏 -->
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

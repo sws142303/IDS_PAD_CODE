@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+
+    </style>
+    <!-- 应用程序总体样式 -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+
+    </style>
+
+    <style name="BottomDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomDialog.Animation" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/translate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_dialog_out</item>
+    </style>
+
+    <style name="AppSplash" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/login_bg1</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- 单选框样式 -->
+    <style name="CheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <!-- 对话框样式 -->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+    <style name="MyDialogStyleBottom" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--// 边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--// 是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--// 半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--// 无标题-->
+        <item name="android:windowBackground">@android:color/black</item>
+        <!--// 背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--// 模糊-->
+    </style>
+    <!-- spinner -->
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spinnerstyle</item>
+        <item name="android:paddingLeft">5dip</item>
+    </style>
+
+</resources>

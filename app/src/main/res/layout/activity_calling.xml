@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 通话页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/callingRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallingActivity" >
+
+    <!-- 左侧 -->
+
+    <LinearLayout
+        android:id="@+id/topPlan"
+        android:layout_width="@dimen/setleft_width_liner"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linear_calling_background"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/listNum"
+            android:layout_width="@dimen/set_calling_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="条数(0)"
+            android:textSize="13dp" />
+
+        <ImageButton
+            android:id="@+id/imgdelete"
+            android:layout_width="@dimen/setleft_deleteico_width"
+            android:layout_height="@dimen/setleft_deleteico_height"
+            android:layout_marginLeft="@dimen/setleft_marginLeft"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/delete_ioc"
+            android:scaleType="centerInside"
+            android:src="@drawable/delete_ioc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delete_layout"
+        android:layout_width="@dimen/setleft_width_liner"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topPlan"
+        android:background="@drawable/linear_calling_background"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:layout_marginLeft="5dp"
+            android:id="@+id/checkAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/checkbox"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btndelete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/setleft_btndelete_heigth"
+            android:layout_marginLeft="@dimen/setleft_btndelete_marginleft"
+            android:layout_weight="2"
+            android:background="#960808"
+            android:text="删除" />
+
+        <Button
+            android:id="@+id/Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/setleft_btndelete_heigth"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:background="#127c1c"
+            android:text="取消" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/callingShowRelativeLayout"
+        android:layout_width="@dimen/setleft_width_liner"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/delete_layout"
+        android:background="@drawable/contact_add_body" >
+
+        <ListView
+            android:id="@+id/callinglist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/white"
+            android:dividerHeight="0dp" >
+        </ListView>
+        <!-- 通话中页面开始 -->
+
+        <RelativeLayout
+            android:id="@+id/callingLocalViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/meeting_meeting_bg"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/callingLocalView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 通话中本地状态开始 -->
+
+                <RelativeLayout
+                    android:id="@+id/callingLocalViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/contact_title_bg"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/txtOutUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dp"
+                        android:text="王丹玲"
+                        android:textColor="@color/contact_title_selected"
+                        android:textSize="@dimen/setleft_calling_txtOutUserNo_fontSize" />
+
+                    <TextView
+                        android:layout_toRightOf="@id/txtOutUserName"
+                        android:id="@+id/txtOutUserNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dp"
+                        android:text="王丹玲"
+                        android:textColor="@color/contact_title_selected"
+                        android:textSize="@dimen/setleft_calling_txtOutUserNo_fontSize" />
+
+                    <Chronometer
+                        android:id="@+id/session_time_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="5dp"
+                        android:textAppearance="?android:attr/textAppearance"
+                        android:textColor="@color/contact_title_selected"
+                        android:textSize="@dimen/setleft_calling_session_time_state_fontSize" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/callingLocalViewVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/contact_title_bg"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/callingLocalViewFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/setleft_calling_callingLocalViewFrame_height"
+                        android:background="@drawable/calling_head" >
+
+                        <!-- 9999999999999999999999999999 -->
+                        <LinearLayout
+                            android:id="@+id/linar_mLocal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <SurfaceView
+                                android:id="@+id/surfaceviewlocal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+
+
+                        <ImageView
+                            android:id="@+id/img_SfVChange"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/retweet"/>
+
+                        <!-- 这是控件是用来开启关闭摄像头   不需要 -->
+                        <!--
+                            <Button
+                            android:id="@+id/btnViewStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/view_show" />  -->
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/callingLocalViewAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setleft_calling_callingLocalViewAudio_height"
+                    android:background="@drawable/calling_head_audio"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/txtAudioUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/setleft_calling_txtAudioUserName_fontSize" />
+                    <TextView
+                        android:id="@+id/txtAudioUserNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/setleft_calling_txtAudioUserNo_fontSize" />
+                    <Chronometer
+                        android:id="@+id/session_time_state_audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearance"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/setleft_calling_session_time_state_audio_fontSize" />
+                </LinearLayout>
+                <!-- 通话中本地状态结束 -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/callingLocalView"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <Button
+                    android:id="@+id/btnHangUp"
+                    android:layout_width="@dimen/setleft_calling_btnHangUp_width"
+                    android:layout_height="@dimen/setleft_calling_btnHangUp_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnHangUp_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_hangup"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnHangUp_fontSize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnVoiceAnswer"
+                    android:layout_width="@dimen/setleft_calling_btnVoiceAnswer_width"
+                    android:layout_height="@dimen/setleft_calling_btnVoiceAnswer_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnVoiceAnswer_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_voiceanswer"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnVoiceAnswer_fontSize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnVideoAnswer"
+                    android:layout_width="@dimen/setleft_calling_btnVideoAnswer_width"
+                    android:layout_height="@dimen/setleft_calling_btnVideoAnswer_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnVideoAnswer_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_videoanswer"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnVideoAnswer_fontSize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnDecline"
+                    android:layout_width="@dimen/setleft_calling_btnDecline_width"
+                    android:layout_height="@dimen/setleft_calling_btnDecline_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnDecline_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_decline"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnDecline_fontSize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnHandsFree"
+                    android:layout_width="@dimen/setleft_calling_btnHandsFree_width"
+                    android:layout_height="@dimen/setleft_calling_btnHandsFree_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnHandsFree_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_handsfree"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnHandsFree_fontSize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnMute"
+                    android:layout_width="@dimen/setleft_calling_btnMute_width"
+                    android:layout_height="@dimen/setleft_calling_btnMute_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnMute_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_mute"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnMute_fontSize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnSwitchCamera"
+                    android:layout_width="@dimen/setleft_calling_btnMute_width"
+                    android:layout_height="@dimen/setleft_calling_btnMute_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnMute_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_switchCamera"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnMute_fontSize"
+                    android:visibility="gone" />
+
+
+
+                <Button
+                    android:id="@+id/btnHoldon"
+                    android:layout_width="@dimen/setleft_calling_btnHoldon_width"
+                    android:layout_height="@dimen/setleft_calling_btnHoldon_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnHoldon_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:text="@string/btn_calling_holdon"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnHoldon_fontSize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnInviteJoin"
+                    android:layout_width="@dimen/setleft_calling_btnInviteJoin_width"
+                    android:layout_height="@dimen/setleft_calling_btnInviteJoin_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/setleft_calling_btnInviteJoin_margintop"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_calling_click"
+                    android:enabled="false"
+                    android:text="@string/btn_calling_invitejoin"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/setleft_calling_btnInviteJoin_fontSize"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 通话中页面结束 -->
+
+
+        <!-- 键盘部分开始 -->
+
+        <ImageButton
+            android:id="@+id/btnKeyboardShow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setleft_calling_btnKeyboardShow_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/keyboard_show"
+            android:contentDescription="@string/app_name" />
+
+        <RelativeLayout
+            android:id="@+id/callingKeyboardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible" >
+
+            <!-- 键盘顶部输入框 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_keyboardtop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setleft_calling_layout_keyboardtop_height"
+                android:background="#ffffff"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <EditText
+                    android:id="@+id/numEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setleft_calling_numEditText_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/btnBackup"
+                    android:background="@drawable/metting_edit_bg"
+                    android:inputType="text"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnBackup"
+                    android:layout_width="@dimen/setleft_calling_btnBackup_width"
+                    android:layout_height="@dimen/setleft_calling_layout_keyboardtop_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_calling_delete"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <!--
+                 <android.inputmethodservice.KeyboardView
+                android:id="@+id/calling_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setleft_calling_btnKeyboardShow_height"
+                android:layout_below="@+id/layout_keyboardtop"
+                android:background="@color/meeting_keyboard_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keyTextColor="@color/white"
+                android:visibility="gone" /> -->
+
+            <LinearLayout
+                android:id="@+id/calling_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/calling_btn_linearlayout_height"
+                android:layout_below="@+id/layout_keyboardtop"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:background="@drawable/btn_calling_one"
+                        android:id="@+id/btn_one"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_two"
+                        android:id="@+id/btn_two"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_three"
+                        android:id="@+id/btn_three"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:background="@drawable/btn_calling_four"
+                        android:id="@+id/btn_four"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_five"
+                        android:id="@+id/btn_five"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_six"
+                        android:id="@+id/btn_six"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:background="@drawable/btn_calling_seven"
+                        android:id="@+id/btn_seven"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_eight"
+                        android:id="@+id/btn_eight"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_nine"
+                        android:id="@+id/btn_nine"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:background="@drawable/btn_calling_xing"
+                        android:id="@+id/btn_xing"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_ling"
+                        android:id="@+id/btn_ling"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:background="@drawable/btn_calling_jing"
+                        android:id="@+id/btn_jing"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 键盘底部四个按钮 -->
+
+            <LinearLayout
+                android:id="@+id/callingKeyboardToolLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setleft_calling_callingKeyboardToolLayout_height"
+                android:layout_below="@+id/calling_linearlayout"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnShrink"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keyboard_shrink" />
+
+                <Button
+                    android:id="@+id/btnCallVoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keyboard_voice" />
+
+                <Button
+                    android:id="@+id/btnCallVideo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keyboard_video" />
+
+                <Button
+                    android:id="@+id/btnAddContact"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keyboard_add" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 键盘部分结束 -->
+    </RelativeLayout>
+    <!-- 右侧 -->
+
+    <RelativeLayout
+        android:id="@+id/callingRemoteViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/callingShowRelativeLayout" >
+
+        <RelativeLayout
+            android:id="@+id/rlcalling"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setleft_calling_keyboardbuttom_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/position_bottom" >
+
+            <Button
+                android:id="@+id/btnGone"
+                android:layout_width="@dimen/setleft_calling_btnGone_width"
+                android:layout_height="@dimen/setleft_calling_btnGone_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/pos_gone_click"
+                android:text="@string/btn_position_gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+
+            <Button
+                android:id="@+id/btnInfo"
+                android:layout_width="@dimen/setleft_calling_btnGone_width"
+                android:layout_height="@dimen/setleft_calling_btnGone_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/position_btn"
+                android:text="@string/btn_position_info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_above="@id/rlcalling"
+            android:id="@+id/callingRemoteViewFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/calling_body_bg" >
+
+            <LinearLayout
+                android:id="@+id/mRemoteLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <SurfaceView
+                    android:id="@+id/surfaceview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <!-- 视频信息显示 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/linearlayout_callInfo"
+                    android:background="#66000000"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="语音"/>
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="视频"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下行丢包"/>
+                        <TextView
+                            android:id="@+id/voice_Downlink"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Downlink"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:text="上行丢包"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/voice_Uplink"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Uplink"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="双向时延"/>
+                        <TextView
+                            android:id="@+id/voice_Bidirectionaldelay"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Bidirectionaldelay"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:text="下行带宽"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/voice_downstreambandwidth"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_downstreambandwidth"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:text="上行带宽"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/voice_Uplinkbandwidth"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                        <TextView
+                            android:id="@+id/video_Uplinkbandwidth"
+                            android:textColor="#000000"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/callingRemoteViewFrameInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/linearlayout_callInfo"
+                    android:background="@drawable/message_bg"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_monitor_name"
+                            android:textColor="@color/contact_title_selected" />
+
+                        <TextView
+                            android:id="@+id/videoUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_monitor_no"
+                            android:textColor="@color/contact_title_selected" />
+
+                        <TextView
+                            android:id="@+id/videoUserNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_monitor_duration"
+                            android:textColor="@color/contact_title_selected" />
+
+                        <Chronometer
+                            android:id="@+id/videoUserTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearance"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </FrameLayout>
+        <!-- 工具栏 -->
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

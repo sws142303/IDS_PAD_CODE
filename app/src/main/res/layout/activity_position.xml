@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定位页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    tools:context=".com.azkj.pad.activity.PositionActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_activity_Position_muen_height"
+        android:background="@color/contact_title_bg" >
+
+        <TextView
+            android:id="@+id/tv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:drawableBottom="@drawable/tab_seleted"
+            android:gravity="center"
+            android:text="@string/title_monitor_list"
+            android:textColor="@color/contact_title_selected"
+            android:textSize="@dimen/set_activity_Position_textSize" />
+
+        <TextView
+            android:id="@+id/tv_tree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:drawableBottom="@drawable/tab_unseleted"
+            android:gravity="center"
+            android:text="@string/title_monitor_tree"
+            android:textColor="@color/contact_title_unselected"
+            android:textSize="@dimen/set_activity_Position_textSize" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_title"
+        android:layout_gravity="center"
+        android:background="@color/intercom_list_bg"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</RelativeLayout>

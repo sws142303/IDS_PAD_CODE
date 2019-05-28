@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--android:layout_width="@dimen/set_layout_pos_filter_width"-->
+    <!--android:layout_height="@dimen/set_layout_pos_filter_height"-->
+<RelativeLayout 
+    android:layout_width="@dimen/set_layout_pos_filter_width"
+    android:layout_height="@dimen/set_layout_pos_filter_height"
+    android:layout_marginTop="@dimen/set_layout_pos_filter_marginTop"
+    android:layout_marginLeft="@dimen/set_layout_pos_filter_marginLeft"
+    android:background="@drawable/pos_filter">
+    <CheckBox
+        android:id="@+id/chbox_3g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/set_layout_pos_filter_checkbox_marginleft"
+        android:layout_marginTop="5dp"
+        android:text="@string/title_postion_3g"
+        android:textColor="@color/white"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:textSize="@dimen/set_layout_pos_filter_textSize" />
+
+    <CheckBox
+        android:id="@+id/chbox_sip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/chbox_3g"
+        android:layout_toRightOf="@id/chbox_3g"
+        android:text="@string/title_postion_sip"
+        android:textColor="@color/white"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:textSize="@dimen/set_layout_pos_filter_textSize" />
+
+    <CheckBox
+        android:id="@+id/chbox_monitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/chbox_3g"
+        android:layout_below="@id/chbox_3g"
+        android:text="@string/title_postion_monitor"
+        android:textColor="@color/white"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:textSize="@dimen/set_layout_pos_filter_textSize" />
+
+    <LinearLayout
+        android:id="@+id/layout_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/chbox_monitor"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/txtRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_postion_range"
+            android:layout_marginLeft="@dimen/set_layout_pos_filter_checkbox_marginleft"
+            android:textColor="@color/white"
+            android:textSize="@dimen/set_layout_pos_filter_textSize" />
+
+        <Spinner
+            android:gravity="center_vertical"
+            android:id="@+id/spRange"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/set_layout_pos_filter_spRange_height"
+            android:entries="@array/range"
+            android:textSize="@dimen/set_layout_pos_filter_textSize"  />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/chbox_dispacher"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+        android:text="@string/title_postion_dispather"
+         android:textColor="@color/white"
+         android:scaleX="0.7"
+         android:scaleY="0.7"
+         android:textSize="@dimen/set_layout_pos_filter_textSize"
+        android:layout_alignBaseline="@+id/chbox_monitor"
+        android:layout_alignBottom="@+id/chbox_monitor"
+        android:layout_toEndOf="@+id/chbox_3g" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnSearch"
+        android:clickable="true"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:background="@drawable/pos_btn_bg_click"
+        android:gravity="center"
+        android:text="@string/title_postion_search"
+        android:textColor="@color/white"
+        android:textSize="@dimen/set_layout_pos_filter_textSize"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+</RelativeLayout>

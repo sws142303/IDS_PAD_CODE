@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主页面 -->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/simple_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- 表头展示部分 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_topheight"
+            android:layout_gravity="center"
+            android:background="@drawable/main_title"
+            android:paddingBottom="3dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="2dip" >
+
+            <ImageView
+                android:id="@+id/imgUserStates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/userstates" />
+
+            <TextView
+                android:id="@+id/txtUserNO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imgUserStates"
+                android:paddingLeft="5dip"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:baselineAligned="false"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtCurrHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/app_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtTimeSeparator1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/time_separator"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtCurrMinutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/app_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtTimeSeparator2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/time_separator"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtCurrSeconds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/app_name"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtCurrDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <!-- 分页标题部分 -->
+
+            <LinearLayout
+                android:layout_width="@dimen/set_mainLeft"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg"
+                android:orientation="vertical" >
+                <GridView
+                    android:id="@+id/gridView_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:gravity="center"
+                    android:listSelector="@android:color/transparent"
+                    android:verticalSpacing="0dip" >
+
+                </GridView>
+
+            </LinearLayout>
+
+            <!-- 分页内容部分 -->
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@color/page_bg" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+
+            <!-- 视频、监控、地图内容部分 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- 按钮操作区域 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottomtools"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/set_downheight"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/position_bottom"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_gone"
+                        android:layout_width="@dimen/setleft_calling_btnGone_width"
+                        android:layout_height="@dimen/setleft_calling_btnGone_height"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                        android:background="@drawable/pos_gone_click"
+                        android:text="@string/btn_position_gone"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/btn_gone"
+                        android:id="@+id/ll_split"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_one"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="@dimen/set_btn_one_width"
+                            android:layout_height="@dimen/set_btn_one_height"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:background="@drawable/splitscreen_one" />
+
+                        <Button
+                            android:id="@+id/btn_four"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="@dimen/set_btn_four_width"
+                            android:layout_height="@dimen/set_btn_four_height"
+                            android:layout_marginRight="10dp"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:background="@drawable/splitscreen_four" />
+
+                        <Button
+                            android:id="@+id/btn_nine"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="@dimen/set_btn_nine_width"
+                            android:layout_height="@dimen/set_btn_nine_height"
+                            android:layout_marginRight="10dp"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:background="@drawable/splitscreen_nine" />
+
+                    </LinearLayout>
+                    <!-- 上墙按钮 -->
+                    <!--                      <Button -->
+                    <!--                         android:id="@+id/btn_decodingupperwall" -->
+                    <!--                         android:layout_width="wrap_content" -->
+                    <!--                         android:layout_height="wrap_content" -->
+                    <!--                         android:layout_marginLeft="5dp" -->
+                    <!--                         android:layout_marginRight="5dp" -->
+                    <!--                         android:layout_toLeftOf="@id/ll_split" -->
+                    <!--                         android:layout_marginTop="8dp" -->
+                    <!--                         android:background="@drawable/position_btn" -->
+                    <!--                         android:text="@string/btn_position_decodingupperwall" -->
+                    <!--                         android:textColor="@color/white"/> -->
+                    <!-- 上墙按钮 -->
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/ll_pos"
+                        android:layout_width="@dimen/setleft_main_ll_pos_width"
+                        android:layout_height="@dimen/setleft_main_ll_pos_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/btnPosBroadcast"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/position_btn"
+                            android:gravity="center"
+                            android:text="@string/btn_meeting_broadcast"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/btnPosMeeting"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/position_btn"
+                            android:gravity="center"
+                            android:text="@string/title_meeting"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/btnPosTalk"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/position_btn"
+                            android:gravity="center"
+                            android:text="@string/title_intercom"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/btnPosMessage"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/position_btn"
+                            android:gravity="center"
+                            android:text="@string/title_message"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pos_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/btnPosOnVoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/position_btn"
+                            android:gravity="center"
+                            android:text="@string/title_postion_voice"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+
+                        <TextView
+                            android:id="@+id/btnPosOnVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/position_btn"
+                            android:gravity="center"
+                            android:text="@string/title_postion_video"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+
+                        <TextView
+                            android:id="@+id/btnPosOnMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/position_btn"
+                            android:gravity="center"
+                            android:text="@string/title_message"
+                            android:textColor="@color/white"
+
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:paddingTop="5dp"
+                        android:layout_width="@dimen/setleft_main_ll_pos_width"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/ll_split">
+                        <Button
+                            android:id="@+id/btn_decodingupperwall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:layout_marginRight="@dimen/set_button_marginleft"
+                            android:background="@drawable/position_btn"
+                            android:text="@string/btn_position_decodingupperwall"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"/>
+                        <Button
+                            android:id="@+id/btn_decodingupperwa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:layout_marginRight="@dimen/set_button_marginleft"
+                            android:background="@drawable/position_btn"
+                            android:text="@string/btn_position_decodingupperwa"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"/>
+                        <Button
+                            android:id="@+id/btn_pushvideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+
+                            android:layout_marginRight="@dimen/set_button_marginleft"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:background="@drawable/position_btn"
+                            android:text="@string/btn_position_pushvideo"
+                            android:layout_weight="1"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:visibility="gone"
+                            android:id="@+id/btn_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+
+                            android:layout_marginRight="@dimen/set_button_marginleft"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:background="@drawable/position_btn"
+                            android:text="@string/btn_position_info"
+                            android:layout_weight="1"
+                            android:textColor="@color/white" />
+
+
+
+                        <Button
+                            android:id="@+id/btn_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/set_miandownButton_height"
+
+                            android:layout_marginRight="@dimen/set_button_marginleft"
+                            android:textSize="@dimen/setleft_calling_alldownbtn_textSize"
+                            android:layout_weight="1"
+                            android:background="@drawable/position_btn"
+                            android:text="@string/btn_position_close"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_trackplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/rl_bottomtools"
+                    android:background="@drawable/pos_trace_play_bg"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/txtPosCurrTimeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="@string/title_postion_time"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/llinertracktime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/txtPosCurrTimeText"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/txtPosCurrHour_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtPosCurrHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+
+
+                    </LinearLayout>
+
+                    <!-- <TextView
+                        android:id="@+id/txtPosCurrHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/txtPosCurrTimeText"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" /> -->
+
+                    <TextView
+                        android:id="@+id/txtPosTimeSeparator1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/llinertracktime"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="@string/time_separator"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtPosCurrMinute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txtPosTimeSeparator1"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtPosTimeSeparator2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txtPosCurrMinute"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="@string/time_separator"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtPosCurrSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/txtPosTimeSeparator2"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtPosSpeed1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/txtPosCurrSecond"
+                        android:background="@drawable/pos_track_speed_click"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="1X"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtPosSpeed2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/txtPosSpeed1"
+                        android:background="@drawable/pos_track_speed_click"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="2X"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtPosSpeed3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/txtPosSpeed2"
+                        android:background="@drawable/pos_track_speed_click"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="3X"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <ProgressBar
+                        android:id="@+id/proPosProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toLeftOf="@+id/btnPosTrackPause"
+                        android:layout_toRightOf="@id/txtPosSpeed3"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/btnPosTrackPause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/btnPosTrackExit"
+                        android:background="@drawable/position_btn"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="@string/title_postion_play"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/btnPosTrackExit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/txtPosProgress"
+                        android:background="@drawable/position_btn"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="@string/title_setting_exit"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtPosProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="2dp"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:text="已完成：0%"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/ll_trackplay">
+
+                    <!-- 地图展示区域 -->
+
+                    <RelativeLayout
+                        android:id="@+id/ll_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/monitor_bg"
+                       >
+
+                        <com.baidu.mapapi.map.MapView
+                            android:id="@+id/bmapView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:clickable="true" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:text="当前GIS成员数量:"
+                        android:id="@+id/map_MemberContent"
+                        android:textColor="@color/black"
+                        android:layout_margin="15dp"
+                        android:textSize="@dimen/set_activity_monitor_textSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+
+                    <!-- 会议、监控展示区域 -->
+
+                    <ScrollView
+                        android:id="@+id/sl_videos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_videos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+
+                        </LinearLayout>
+                    </ScrollView>
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/linearlayout_callInfo_meeting"
+                        android:background="#66000000"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="语音"/>
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="视频"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="下行丢包"/>
+                            <TextView
+                                android:id="@+id/voice_Downlink_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                            <TextView
+                                android:id="@+id/video_Downlink_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:text="上行丢包"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/voice_Uplink_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                            <TextView
+                                android:id="@+id/video_Uplink_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="双向时延"/>
+                            <TextView
+                                android:id="@+id/voice_Bidirectionaldelay_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                            <TextView
+                                android:id="@+id/video_Bidirectionaldelay_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:text="下行带宽"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/voice_downstreambandwidth_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                            <TextView
+                                android:id="@+id/video_downstreambandwidth_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:text="上行带宽"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/voice_Uplinkbandwidth_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                            <TextView
+                                android:id="@+id/video_Uplinkbandwidth_meeting"
+                                android:textColor="#000000"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <!-- 地图相关控件 -->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_positiontools"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:gravity="right"
+                        android:background="@android:color/transparent"
+                        android:paddingRight="5dp" >
+
+                        <TextView
+                            android:id="@+id/tv_placeholder1"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/set_bottomTextViewheight"
+                            android:layout_alignParentBottom="true"
+                            android:background="@android:color/transparent"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+
+
+                        <LinearLayout
+                            android:layout_marginRight="@dimen/rightbottommarginright"
+                            android:id="@+id/cleanLinearLayout"
+                            android:layout_width="@dimen/set_linerLayout_width"
+                            android:layout_height="@dimen/set_linerLayout_height"
+                            android:layout_above="@+id/tv_placeholder1"
+                            android:background="@drawable/pos_button_bg"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/pos_button_delete"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/btn_clean"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_postion_clean"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/set_textSize"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginRight="@dimen/rightbottommarginright"
+                            android:id="@+id/traceLinearLayout"
+                            android:layout_width="@dimen/set_linerLayout_width"
+                            android:layout_height="@dimen/set_linerLayout_height"
+                            android:layout_above="@+id/cleanLinearLayout"
+                            android:background="@drawable/pos_button_bg"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/set_marginBottom" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/pos_button_location"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/btn_trace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_postion_trace"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/set_textSize"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+                        <!-- 轨迹回放模块开始-->
+                        <LinearLayout android:id="@+id/trackLinearLayout"
+                            android:layout_marginRight="@dimen/rightbottommarginright"
+                            android:layout_width="@dimen/set_linerLayout_width"
+                            android:layout_height="@dimen/set_linerLayout_height"
+                            android:layout_above="@+id/traceLinearLayout"
+                            android:background="@drawable/pos_button_bg"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/set_marginBottom"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/pos_button_trace"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/btn_track"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_postion_track"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/set_textSize"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+                        <!-- 轨迹回放模块结束-->
+
+
+                        <LinearLayout
+                            android:layout_marginRight="@dimen/rightbottommarginright"
+                            android:id="@+id/filterLinearLayout"
+                            android:layout_width="@dimen/set_linerLayout_width"
+                            android:layout_height="@dimen/set_linerLayout_height"
+                            android:layout_above="@+id/trackLinearLayout"
+                            android:background="@drawable/pos_button_bg"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/set_marginBottom" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/pos_button_filter"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/btn_filter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_postion_filter"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/set_textSize"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_marginRight="@dimen/rightbottommarginright"
+                            android:id="@+id/multipleLinearLayout"
+                            android:layout_width="@dimen/set_linerLayout_width"
+                            android:layout_height="@dimen/set_linerLayout_height"
+                            android:layout_above="@+id/filterLinearLayout"
+                            android:background="@drawable/pos_button_bg"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="horizontal"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/set_marginBottom" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/pos_button_filter"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/btn_multiple"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_postion_multiple"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/set_textSize"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginRight="@dimen/rightbottommarginright"
+                            android:id="@+id/singleLinearLayout"
+                            android:layout_width="@dimen/set_linerLayout_width"
+                            android:layout_height="@dimen/set_linerLayout_height"
+                            android:layout_above="@+id/multipleLinearLayout"
+                            android:layout_marginBottom="@dimen/set_marginBottom"
+                            android:background="@drawable/pos_button_bg"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/pos_button_single"
+                                android:contentDescription="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/btn_single"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_postion_single"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/set_textSize"
+                                android:layout_marginLeft="5dp" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/imageButton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="40dp"
+                            android:background="#00000000"
+                            android:src="@drawable/map_multiple" />
+                        <ScrollView
+                            android:layout_width="@dimen/checklinearlayout_width"
+                            android:layout_height="fill_parent"
+                            android:scrollbars="vertical"
+                            android:fadingEdge="vertical"
+                            android:layout_below ="@+id/imageButton1"
+                            android:layout_above="@+id/singleLinearLayout"
+                            android:layout_marginBottom="@dimen/set_marginBottom"
+                            android:layout_alignParentRight="true"
+                            android:fillViewport="true"
+                            android:gravity="top">
+                            <LinearLayout
+                                android:id="@+id/employeeList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/tmbj"
+                                android:paddingLeft="2dp"
+                                android:paddingRight="2dp"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </RelativeLayout>
+
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/rrrrrrr"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name" />
+
+    <com.azkj.pad.utility.RoundProgressBarWidthNumber
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:id="@+id/imgRoundProgressBar"
+        app:progress_text_size="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@id/rrrrrrr" />
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/chatImgOutText" -->
+    <!-- android:layout_width="100dp" -->
+    <!-- android:layout_height="100dp" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:contentDescription="@string/app_name" -->
+    <!-- /> -->
+
+
+    <TextView
+        android:id="@+id/chatImageOutDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rrrrrrr"
+        android:layout_marginTop="10dp"
+        android:text="7月16日 15:37"
+        android:textSize="12sp" />
+    <!-- <ImageView -->
+    <!-- android:id="@+id/chatImgOutText1" -->
+    <!-- android:layout_width="100dp" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_alignBottom="@+id/chatImgOutText" -->
+    <!-- android:layout_alignRight="@+id/chatImgOutText" -->
+    <!-- android:background="#44ee0000" -->
+    <!-- android:visibility="visible"/> -->
+
+</RelativeLayout>

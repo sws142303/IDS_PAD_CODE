@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 对讲页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntercomActivity" >
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_leftdown"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/page_bg" >
+
+        <TextView
+            android:id="@+id/tv_placeholder1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn_intercom"
+            android:layout_width="@dimen/set_intercomBtnsize"
+            android:layout_height="@dimen/set_intercomBtnsize"
+            android:layout_above="@id/tv_placeholder1"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/intercom_btn"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tv_placeholder2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@id/btn_intercom"
+            android:layout_alignParentLeft="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/ll_queuing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_placeholder2"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <TextView
+                android:id="@+id/tv_queuing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/title_intercom_queuing"
+                android:textColor="@color/intercom_queuing"
+                android:textSize="@dimen/set_tv_queuing_fontsize" />
+
+            <TextView
+                android:singleLine="true"
+                android:maxEms="8"
+                android:ellipsize="end"
+                android:id="@+id/tv_queuingvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/intercom_queuing"
+                android:textSize="@dimen/set_tv_queuingvl_fontsize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_placeholder3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@id/ll_queuing"
+            android:layout_alignParentLeft="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/ll_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_placeholder3"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <TextView
+                android:id="@+id/tv_speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/title_intercom_speaker"
+                android:textColor="@color/setting_about"
+                android:textSize="@dimen/set_tv_speaker_fontsize" />
+
+            <TextView
+                android:singleLine="true"
+                android:maxEms="8"
+                android:ellipsize="end"
+                android:id="@+id/tv_speakervl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/setting_about"
+                android:textSize="@dimen/set_tv_speakervl_fontsize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_placeholder4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@id/ll_speaker"
+            android:layout_alignParentLeft="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/ll_states"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_placeholder4"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <TextView
+                android:id="@+id/tv_states"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/title_intercom_states"
+                android:textColor="@color/setting_about"
+                android:textSize="@dimen/set_tv_states_fontsize" />
+
+            <TextView
+                android:id="@+id/tv_statesvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/setting_about"
+                android:textSize="@dimen/set_tv_statesvl_fontsize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_placeholder5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@id/ll_states"
+            android:layout_alignParentLeft="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/ll_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_placeholder5"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/title_intercom_group"
+                android:textColor="@color/setting_about"
+                android:textSize="@dimen/set_tv_group_fontsize"/>
+
+            <TextView
+                android:id="@+id/tv_groupvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/setting_about"
+                android:textSize="@dimen/set_tv_groupv1_fontsize"
+                android:singleLine="true"
+                android:maxEms="8"
+                android:ellipsize="end"/>
+            <!--  <com.baizhi.app.MarqueeTextView
+               android:id="@+id/tv_groupvl"
+               android:layout_width="@dimen/set_layout_contact_tv_title_width"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:ellipsize="marquee"
+               android:singleLine="true"
+               android:marqueeRepeatLimit="marquee_forever"
+               android:focusable="false"
+               android:focusableInTouchMode="false"
+               android:textColor="@color/setting_about"
+               android:text="测试"
+               android:textSize="@dimen/set_tv_group_fontsize" /> -->
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_footer"
+        android:orientation="vertical"
+        android:background="@color/intercom_list_bg">
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/llayout_ptt_show"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/set_item_height"
+            android:background="@drawable/call_keyboard_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:layout_margin="3dp"
+                android:id="@+id/et_add_contact"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/round_edittext_white"
+                android:hint="@string/et_add_contact_hint"
+                android:inputType="text"
+                android:textSize="@dimen/set_groupname_fontsize"
+                android:maxLength="20" />
+            <!--
+            <Button
+            android:id="@+id/btn_search_contact"
+            android:layout_width="32dp"
+            android:layout_height="34dp"
+            android:background="@drawable/contact_grp_search"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"/>-->
+        </LinearLayout>
+        <ExpandableListView
+            android:layout_above="@id/llayout_ptt_show"
+            android:id="@+id/treenode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:dividerHeight="0dp" >
+        </ExpandableListView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

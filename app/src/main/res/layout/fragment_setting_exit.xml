@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置-安全退出 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:paddingLeft="@dimen/set_intercomFragment_paddingleft"
+    android:paddingRight="@dimen/set_intercomFragment_paddingright"
+    android:paddingTop="@dimen/set_intercomFragment_paddingtop">
+
+    <Button
+        android:id="@+id/bt_exit"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_login_cancel"
+        android:contentDescription="@string/btn_cancel"
+        android:text="@string/btn_setting_exit"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/set_dipatchsetting_textSize2" />
+
+</RelativeLayout>

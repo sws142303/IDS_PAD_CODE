@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/set_fragmentmessage_itemtext_height"
+    android:background="@drawable/list_1"
+    android:paddingTop="@dimen/set_fragmentmessage_itemtext_paddingtop"
+    android:paddingRight="@dimen/set_fragmentmessage_itemtext_paddingright"
+    android:paddingBottom="0dp"
+    android:paddingLeft="@dimen/set_fragmentmessage_itemtext_paddingleft">
+        
+      <CheckBox 
+        android:id="@+id/imgckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox"
+        android:visibility="gone"
+        />
+    <FrameLayout
+        android:id="@+id/messageUserImg"
+        android:layout_width="@dimen/set_fragmentmessage_itemtext_FrameLayout_width"
+        android:layout_height="@dimen/set_fragmentmessage_itemtext_FrameLayout_height"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bighead"
+        android:layout_toRightOf="@id/imgckbox">
+
+        <TextView
+            android:id="@+id/txtImgMessageCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/dian"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/messageImgTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/messageUserImg" >
+
+        <TextView
+            android:id="@+id/txtImgMessageUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/txtImgMessageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/messageImgBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/messageImgTop"
+        android:layout_below="@id/messageImgTop"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"
+            android:text="[" />
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_type_img"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="3dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/set_fragmentmessage_itemtext_textSize"
+            android:text="图片]" 
+            android:layout_marginLeft="3dp"/>
+       
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

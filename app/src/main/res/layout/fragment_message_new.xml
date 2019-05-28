@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/set_fragmentmessage_new_topheight"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layoutMessageTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="@drawable/contact_add_bg" >
+
+        <TextView
+            android:id="@+id/messagenewtop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="@string/title_message_new" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/layoutMessageTop"
+        android:background="@drawable/contact_add_top2" >
+
+        <TextView
+            android:id="@+id/messageuserleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/title_message_to"
+            android:textSize="@dimen/set_fragment_contact_new_textSize"  />
+
+        <EditText
+            android:id="@+id/txtMessageNewContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnMessageAddContact"
+            android:layout_toRightOf="@id/messageuserleft"
+            android:background="#00000000"
+            android:inputType="text|number"
+            android:digits="0,1,2,3,4,5,6,7,8,9,admin,,"
+            android:hint="多个号码用英文逗号隔开"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/set_fragment_contact_new_textSize" />
+<!-- android:digits="0,1,2,3,4,5,6,7,8,9,," -->
+        <ImageButton
+            android:id="@+id/btnMessageAddContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/meeting_add"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/txtNewRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragmentmessage_new_txtNewRelativeLayout_height"
+        android:layout_above="@+id/message_new_foot"
+        android:background="@drawable/page_footer"
+        android:paddingLeft="@dimen/set_fragmentmessage_new_txtNewRelativeLayout_marginleft"
+        android:paddingRight="@dimen/set_fragmentmessage_new_txtNewRelativeLayout_marginright" >
+
+        <EditText
+            android:id="@+id/txtMessageBoday"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_fragmentmessage_new_txtMessageBoday_height"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnMessageSend"
+            android:inputType="text"
+            android:background="@drawable/metting_edit_bg"
+            android:layout_marginRight="10dp" />
+
+        <ImageButton
+            android:id="@+id/btnMessageSend"
+            android:layout_width="@dimen/set_fragmentmessage_new_btnMessageSend_width"
+            android:layout_height="@dimen/set_fragmentmessage_new_btnMessageSend_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/message_btn_send"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/message_new_foot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_fragmentmessage_new_message_new_foot_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnMessageImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_image"
+            android:contentDescription="@string/app_name" 
+            android:scaleType="center"/>
+
+        <ImageButton
+            android:id="@+id/btnMessageVoice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_recording"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center" />
+
+        <ImageButton
+            android:id="@+id/btnMessageVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_video"
+            android:contentDescription="@string/app_name" 
+            android:scaleType="center"/>
+
+        <ImageButton
+            android:id="@+id/btnMessageLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/message_location"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recorderLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/page_footer"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btnRecoderHidden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_voice_click" />
+
+        <Button
+            android:id="@+id/btnRecoderBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/voice_begin" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/chatAudioInUserImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/head"
+        android:contentDescription="@string/app_name" />
+
+    <ImageButton
+        android:focusable="false"
+        android:id="@+id/chatAudioInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/chatAudioInUserImage"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/chatAudioInUserImage"
+        android:background="@drawable/message_audio_in"
+        android:clickable="false"
+        android:contentDescription="@string/app_name"
+        android:focusableInTouchMode="false" />
+
+    <TextView
+
+        android:id="@+id/chatAudioInTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/chatAudioInText"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/reddian_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/chatAudioInTime"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/reddian" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chatAudioInText"
+        android:layout_below="@+id/chatAudioInText"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/message_time"
+            android:clickable="false"
+            android:contentDescription="@string/app_name"
+            android:focusableInTouchMode="false" />
+
+        <TextView
+            android:id="@+id/chatAudioInDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:text="7月16日 15:37"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

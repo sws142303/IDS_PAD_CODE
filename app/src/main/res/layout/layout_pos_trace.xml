@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/set_layout_zhuizong"
+    android:layout_height="@dimen/set_layout_pos_trace_main_heigth">
+
+    <RelativeLayout
+        android:background="@drawable/pos_trace_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearlayout_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/editUserNo"
+                android:layout_width="@dimen/main_zhuizongPopEditTextwidth"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/pos_edit_bg"
+                android:drawableRight="@drawable/spinner_down"
+                android:hint="@string/title_postion_no"
+                android:inputType="number"
+                android:textSize="@dimen/set_layout_pos_filter_track_textSize"
+                android:visibility="visible" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                style="@style/spinner_style"
+                android:layout_width="@dimen/main_zhuizongPopEditTextwidth"
+                android:layout_height="30dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnAddNo"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/pos_btn_add" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listUserNo"
+            android:layout_width="@dimen/main_zhuizongPopEditTextwidth"
+            android:layout_height="@dimen/set_layout_pos_trace_ListView_heigth"
+            android:layout_below="@id/linearlayout_userName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp">
+
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/layout_trace_op"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/set_layout_pos_trace_bottom_height"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnClean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pos_btn_bg_click"
+                android:gravity="center"
+                android:text="@string/title_message_clear"
+                android:textColor="@color/white"
+                android:textSize="@dimen/set_layout_pos_filter_track_textSize" />
+
+            <TextView
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/pos_btn_bg_click"
+                android:gravity="center"
+                android:text="@string/title_postion_search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/set_layout_pos_filter_track_textSize" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

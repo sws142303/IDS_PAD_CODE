@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/setleft_callingitem_height"
+    android:background="@drawable/list_1">
+    <CheckBox
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/ckbox"
+        android:layout_width="@dimen/setleft_callingitem_ckbox_width"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox"
+         />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/calling_userimg"
+        android:layout_width="@dimen/setleft_calling_userimg_width"
+        android:layout_height="@dimen/setleft_calling_userimg_heigth"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/setleft_callingitem_calling_userimg_marginleft"
+        android:contentDescription="@string/app_name" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/calling_item_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/setleft_callingitem_calling_item_top_margintop"
+            android:layout_toRightOf="@id/calling_userimg">
+
+            <TextView
+                android:id="@+id/calling_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textSize="@dimen/set_groupname_fontsize" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/calling_item_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/calling_item_top"
+            android:layout_below="@id/calling_item_top" >
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/calling_timespan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/set_groupname_fontsize" />
+            <TextView
+                android:id="@+id/calling_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/set_groupname_fontsize"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+  </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants">
+    <ImageButton
+        android:focusable="false"
+        android:id="@+id/chatAudioOutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/message_audio_out"
+        android:contentDescription="@string/app_name"
+        android:clickable="false"
+        android:focusableInTouchMode="false" />
+    <TextView
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/chatAudioOutTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/chatAudioOutText"
+        android:text="99" />
+    <com.azkj.pad.utility.RoundProgressBarWidthNumber
+        android:id="@+id/audioRoundProgressBar"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:progress_text_size="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/chatAudioOutTime"/>
+
+    <ImageView
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/imgMessageFail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_fail"
+        android:contentDescription="@string/app_name"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/chatAudioOutTime"
+        android:visibility="gone" />
+    <TextView
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/chatAudioOutDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/chatAudioOutText"
+        android:layout_marginTop="20dp"
+        android:text="7月16日 15:37"
+        android:textSize="12sp" />
+</RelativeLayout>

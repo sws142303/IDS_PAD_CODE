@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_show"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/chatVideoOutText"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/app_name" />
+
+
+        <ImageView
+            android:id="@+id/list_say_imageview_dc"
+            android:layout_width="30dp"
+            android:layout_height="17dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/videodc"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgMessageFail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/relative_show"
+        android:background="@drawable/message_fail"
+        android:contentDescription="@string/app_name"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/chatVideoOutDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relative_show"
+        android:layout_marginTop="10dp"
+        android:text="7月16日 15:37"
+        android:textSize="12sp" />
+
+    <com.azkj.pad.utility.RoundProgressBarWidthNumber
+        android:id="@+id/videoRoundProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/relative_show"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:progress_text_size="18dp" />
+
+</RelativeLayout>

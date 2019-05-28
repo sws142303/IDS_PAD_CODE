@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通话记录-会议菜单 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnCallingMenuAudio"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calling_audio"
+        android:contentDescription="@string/app_name" 
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnCallingMenuVideo"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calling_video"
+        android:contentDescription="@string/app_name"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnCallingMenubroadcast"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calling_message"
+        android:contentDescription="@string/app_name"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnCallingMenuDelete"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/calling_delete"
+        android:contentDescription="@string/app_name"
+        android:layout_weight="1" />
+</LinearLayout>

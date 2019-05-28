@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 配置-调度账号 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_dispatcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/set_dipatchsetting_paddingleft"
+    android:paddingRight="@dimen/set_dipatchsetting_paddingright"
+    android:paddingTop="@dimen/set_dipatchsetting_paddingtop">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_setting_dispatcher_title"
+        android:textColor="@color/contact_title_unselected"
+        android:textSize="@dimen/textsize_settingActivity" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_title"
+        android:paddingTop="20dp" >
+
+        <TableRow android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/title_setting_dispatcher_username"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/tv_usernamevl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+        </TableRow>
+        
+         <TableRow android:gravity="center_vertical" >
+       
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/title_setting_dispatcher_password"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/tv_passwordvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+        </TableRow>
+
+        <TableRow android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/tv_serverip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/title_setting_dispatcher_serverip"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/tv_serveripvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            
+        </TableRow>
+        
+         <TableRow android:gravity="center_vertical" >
+       
+
+            <TextView
+                android:id="@+id/tv_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/title_setting_dispatcher_port"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+
+            <TextView
+                android:id="@+id/tv_portvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@color/contact_title_selected"
+                android:textSize="@dimen/textsize_settingActivity" />
+        </TableRow>
+        
+    </TableLayout>
+
+</RelativeLayout>
