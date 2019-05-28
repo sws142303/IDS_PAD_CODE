@@ -954,7 +954,7 @@ public class MainActivity extends TabActivity implements OnItemClickListener,
         InitView();
         InitData();
         initBaiduMap(); //百度地图开始
-        initGetCameraUVC();
+        initGetCameraUVC();//获取当前设备是否存在USB摄像头
 
         //初始化统计丢包时延相关View
         initMediaStatistics();
