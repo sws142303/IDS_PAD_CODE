@@ -47,6 +47,8 @@ public class Communicationbridge {
 	//初始化
 	public static boolean init(){
 
+
+
 		 String localip=getHostIP();
 		 if(localip==null)
 			 localip="";
@@ -54,7 +56,8 @@ public class Communicationbridge {
 		boolean LogIsOpen = prefs.getBoolean(GlobalConstant.SP_START_LOG, false);
 		 boolean ret= MediaEngine.GetInstance().ME_Init("0.0.0.0",50004, 5, "/sdcard/sdk_log.txt", LogIsOpen, false);
 		 loginVoidState = ret;
-		if(ret){
+         MediaEngine.GetInstance().ME_MonitorUsbCamera(context.getApplicationContext());
+		 if(ret){
 			Log.e("初始化", "初始化成功");
 		}else{
 			Intent loginStateIntent = new Intent();

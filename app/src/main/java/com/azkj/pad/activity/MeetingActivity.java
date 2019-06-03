@@ -189,7 +189,7 @@ public class MeetingActivity extends Activity implements OnClickListener{
 	// 通过定位创建会议
 	private PositionRecordBroadcastReceiver positionRecordReceiver;
 	private PTT_3G_PadApplication ptt_3g_PadApplication;
-	private String cameraCode = "1";
+	private String cameraCode = "2";
 	private MLocalViewHideOrShowReceiver mLocalViewHideOrShowReceiver;
 	SurfaceView sfv_new;
 	/*public KeyboardUtil getKeyboardUtil() {
@@ -668,7 +668,7 @@ public class MeetingActivity extends Activity implements OnClickListener{
 	protected void onResume() {
 
 		//设置默认摄像头为前置还是后置  1为前置，2为后置
-		cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "1");
+		cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "2");
 		MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
 
 

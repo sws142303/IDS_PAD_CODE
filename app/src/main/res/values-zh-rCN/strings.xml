@@ -96,6 +96,7 @@
     <string name="title_setting_video_camera_front">前置</string>
     <string name="title_setting_video_startup">启用</string>
     <string name="title_setting_video_close">关闭</string>
+    <string name="title_setting_video_camera_USB">USB摄像头</string>
     <string name="title_setting_video_camera_rear">后置</string>
     <string name="title_setting_video_camera_q">前置     旋转角度</string>
     <string name="title_setting_video_camera_h">后置     旋转角度</string>

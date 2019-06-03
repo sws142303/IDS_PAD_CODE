@@ -140,7 +140,7 @@ public class CallingActivity extends Activity implements OnClickListener {
     private Chronometer session_time_state, session_time_state_audio;
     private RelativeLayout callingLocalViewFrame;
     //摄像头状态   1为前置   2为后置
-    private String cameraCode = "1";
+    private String cameraCode = "2";
 
     //记录当前本地远端画面是否改变
     private boolean surfaceIsChange = false;
@@ -217,7 +217,7 @@ public class CallingActivity extends Activity implements OnClickListener {
         return keyboardUtil;
     }*/
     //显示批量删除按钮的容器
-    LinearLayout topPlan;
+    RelativeLayout topPlan;
     //通话记录上方的删除图标
     ImageButton imgbtn;
     //删除按钮所在容器
@@ -327,6 +327,7 @@ public class CallingActivity extends Activity implements OnClickListener {
         audioManager.setMode(ptt_3g_PadApplication.getGlobalAudioManagerMode());
         setVolumeUtils = new SetVolumeUtils(this,audioManager);
         MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
+        Log.e("******************7777**************","通话界面  : " + cameraCode);
 
         callingBroadcastReceiver = new CallingBroadcastReceiver();
         IntentFilter callingIntentFilter = new IntentFilter();
@@ -363,7 +364,7 @@ public class CallingActivity extends Activity implements OnClickListener {
 
         linar_mLocal = (LinearLayout) findViewById(R.id.linar_mLocal);
         //获取显示删除图标的容器
-        topPlan = (LinearLayout) findViewById(R.id.topPlan);
+        topPlan = (RelativeLayout) findViewById(R.id.topPlan);
         //获取删除图标的实例
         imgbtn = (ImageButton) findViewById(R.id.imgdelete);
         //获取删除容器的实例
@@ -539,9 +540,11 @@ public class CallingActivity extends Activity implements OnClickListener {
     protected void onResume() {
 
         //设置默认摄像头为前置还是后置  1为前置，2为后置
-        cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "1");
-        MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
 
+        String cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "2");
+        MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
+        Log.e("摄像头","通话界面 onResume :"+cameraCode);
+        Log.e("******************7777**************","通话界面 onResume : " + cameraCode);
         //设置帧率 比特率 分辨率
         String bitrateString = prefs.getString(GlobalConstant.SP_VIDEO_BITRATE, "0");
         String framerateString = prefs.getString(GlobalConstant.SP_VIDEO_FRAMERATE, "0");
@@ -2024,7 +2027,9 @@ public class CallingActivity extends Activity implements OnClickListener {
     // 呼出操作
     private void callingOutgoingDo(String no, final int dwSessId) {
 
-
+//        String cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "2");
+//        MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
+//        Log.e("摄像头","通话界面 callingOutgoingDo :"+cameraCode);
 
         String callType = prefs.getString(GlobalConstant.CALLHASVIDEO, GlobalConstant.CALLTYPE_VOICE);
         Log.e("callingOutgoingDo", "呼出操作  callType : " + callType);
@@ -2186,7 +2191,6 @@ public class CallingActivity extends Activity implements OnClickListener {
         btnMute.setEnabled(true);
         btnHoldon.setEnabled(true);
         btnSwitchCamera.setEnabled(true);
-        Log.e("切换摄像头Btn","callingTalkingDo setEnabled(true)");
         //检查是否开启免提，如果开启则关闭
 		/*String pcDevName = MtcMedia.Mtc_AudioGetOutputDev();
 		if (pcDevName.contains("speaker")) {
@@ -2769,9 +2773,10 @@ public class CallingActivity extends Activity implements OnClickListener {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            //设置默认摄像头为前置还是后置  1为前置，2为后置
-            String devId = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "1");
-            MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
+//            //设置默认摄像头为前置还是后置  1为前置，2为后置
+//            String devId = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "2");
+//            MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(devId));
+
             //渲染SurfaceView
             if (mLocalView == null) {
                 mLocalView = (SurfaceView) findViewById(R.id.surfaceviewlocal);
@@ -2789,7 +2794,6 @@ public class CallingActivity extends Activity implements OnClickListener {
             mRemoteView.setVisibility(View.VISIBLE);
             Log.e("Sws测试mRemoteView", "|  显示 2711");
 
-            Log.e("===Sws测试摄像头", "当前不在call界面 接收到广播进行视频  Integer.valueOf(devId): " + Integer.valueOf(devId));
         }
     }
 
@@ -2990,14 +2994,14 @@ public class CallingActivity extends Activity implements OnClickListener {
                 //编码宽度，高度，帧率，码率，旋转角度，0，true   设置后置   ,Integer.valueOf(videoSend_Proportion)
                 MediaEngine.GetInstance().ME_SetVideoCodecParam(Integer.valueOf(width), Integer.valueOf(height), framerate, bitrate, Integer.valueOf(xzjd_h), 0, true, Integer.valueOf(videoSend_Proportion));
             }
-
+            Log.e("摄像头","通话界面 切换摄像头 :"+cameraCode);
             // 切换前后摄像头   11/10 Sws add
             if (cameraCode.equals("1")) {
                 cameraCode = "2";
             } else if (cameraCode.equals("2")) {
                 cameraCode = "1";
             }
-
+            Log.e("摄像头","通话界面 切换摄像头zhihou :"+cameraCode);
             if (cameraCode.equals("1")) {
                 MediaEngine.GetInstance().ME_ChangeVideoDevice(mSessId, Integer.valueOf(cameraCode));
             } else if (cameraCode.equals("2")) {

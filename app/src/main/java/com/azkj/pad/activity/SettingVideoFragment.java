@@ -149,7 +149,7 @@ public class SettingVideoFragment extends PreferenceActivity {
 
 
 		//前后置摄像头
-		String camera = prefs.getString(GlobalConstant.ACTION_GETCAMERA,"-1");
+		String camera = prefs.getString(GlobalConstant.ACTION_GETCAMERA,"2");
 		if(camera.equals("1")){
 			rb_camerafront.setTextColor(mActivity.getResources().getColor(R.color.intercom_list_online));
 			rb_camerarear.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));
@@ -159,12 +159,11 @@ public class SettingVideoFragment extends PreferenceActivity {
 			rb_camerafront.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));;
 			rb_UVC_Camera.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));;
 		}else if(camera.equals("-1")){
-			camera = "1";
-			rb_camerafront.setTextColor(mActivity.getResources().getColor(R.color.intercom_list_online));
-			rb_camerarear.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));
+			rb_camerarear.setTextColor(mActivity.getResources().getColor(R.color.intercom_list_online));
+			rb_camerafront.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));
 			Editor editor = prefs.edit();
 			//editor.putString(GlobalConstant.SP_VIDEO_CAMERA, mVideoCameraArray[0]);
-			editor.putString(GlobalConstant.ACTION_GETCAMERA, "1");
+			editor.putString(GlobalConstant.ACTION_GETCAMERA, "2");
 			editor.apply();
 		}
 
@@ -567,10 +566,19 @@ public class SettingVideoFragment extends PreferenceActivity {
 		rb_camerafront.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Editor editor = prefs.edit();
-				//editor.putString(GlobalConstant.SP_VIDEO_CAMERA, mVideoCameraArray[0]);
-				editor.putString(GlobalConstant.ACTION_GETCAMERA, "1");
-				editor.apply();
+				MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo = ptt_3g_PadApplication.getMe_videoDeviceInfo_Front();
+				if (me_videoDeviceInfo != null){
+					Editor editor = prefs.edit();
+					editor.putString(GlobalConstant.ACTION_GETCAMERA, String.valueOf(me_videoDeviceInfo.id));
+					editor.apply();
+					MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(me_videoDeviceInfo.id);
+					Log.e("******************7777**************","qianzhi  : " + me_videoDeviceInfo.id);
+				}
+
+//				Editor editor = prefs.edit();
+//				//editor.putString(GlobalConstant.SP_VIDEO_CAMERA, mVideoCameraArray[0]);
+//				editor.putString(GlobalConstant.ACTION_GETCAMERA, "1");
+//				editor.apply();
 				rb_camerafront.setTextColor(mActivity.getResources().getColor(R.color.intercom_list_online));
 				rb_camerarear.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));
 				rb_UVC_Camera.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));
@@ -579,9 +587,17 @@ public class SettingVideoFragment extends PreferenceActivity {
 		rb_camerarear.setOnClickListener(new OnClickListener() {
 			@Override 
 			public void onClick(View v) {
-				Editor editor = prefs.edit();
-				editor.putString(GlobalConstant.ACTION_GETCAMERA, "2");
-				editor.apply();
+//				Editor editor = prefs.edit();
+//				editor.putString(GlobalConstant.ACTION_GETCAMERA, "2");
+//				editor.apply();
+				MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo = ptt_3g_PadApplication.getMe_videoDeviceInfo_Back();
+				if (me_videoDeviceInfo != null){
+					Editor editor = prefs.edit();
+					editor.putString(GlobalConstant.ACTION_GETCAMERA, String.valueOf(me_videoDeviceInfo.id));
+					editor.apply();
+					MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(me_videoDeviceInfo.id);
+					Log.e("******************7777**************","后置  : " + me_videoDeviceInfo.id);
+				}
 				rb_camerarear.setTextColor(mActivity.getResources().getColor(R.color.intercom_list_online));
 				rb_camerafront.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));
 				rb_UVC_Camera.setTextColor(mActivity.getResources().getColor(R.color.contact_title_unselected));
@@ -595,6 +611,8 @@ public class SettingVideoFragment extends PreferenceActivity {
 					Editor editor = prefs.edit();
 					editor.putString(GlobalConstant.ACTION_GETCAMERA, String.valueOf(me_videoDeviceInfo.id));
 					editor.apply();
+					MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(me_videoDeviceInfo.id);
+					Log.e("******************7777**************","USB  : " + me_videoDeviceInfo.id);
 				}
 
 				rb_UVC_Camera.setTextColor(mActivity.getResources().getColor(R.color.intercom_list_online));

@@ -98,6 +98,7 @@
     <string name="title_setting_video_camera_front">front</string>
     <string name="title_setting_video_startup">StartUp</string>
     <string name="title_setting_video_close">Close</string>
+    <string name="title_setting_video_camera_USB">USB Camera</string>
     <string name="title_setting_video_camera_rear">rear</string>
     <string name="title_setting_video_camera_rotate0">0 degree</string>
     <string name="title_setting_video_camera_rotate90">90 degree</string>
@@ -114,6 +115,7 @@
     <string name="title_setting_video_resolution_d1">D1(704*576)</string>
     <string name="title_setting_video_resolution_cif">CIF(288*352)</string>
     <string name="title_setting_video_resolution_qvga">QVGA(240*320)</string>
+    <string name="wrong_loginHasFailed">initError</string>
     <string name="title_setting_other_encrypt">Whether or not to output a log</string>
     <string name="title_setting_other_stun">Whether to enable NAT</string>
     <string name="title_setting_other_startup">Is powered up</string>
@@ -128,6 +130,11 @@
     <string name="btn_position_pushvideo">PushVideo</string>
     <string name="btn_position_info">Info</string>
     <string name="btn_position_close">Close</string>
+    <dimen name="set_layout_pos_trace_right">65dp</dimen>
+    <dimen name="set_layout_pos_trace_bottom">45dp</dimen>
+    <dimen name="layoutmarginRight">65dp</dimen>
+     <dimen name="setleft_checkbox_width">25dp</dimen>
+    <dimen name="layoutmarginBottom">35dp</dimen>
     <string name="btn_calling_holdon">hold on</string>
     <string name="title_main_exitinfo">alert</string>
     <string name="title_main_ifexit">completely exit ?</string>

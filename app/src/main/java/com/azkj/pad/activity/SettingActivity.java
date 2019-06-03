@@ -236,7 +236,7 @@ public class SettingActivity extends Activity{
 					width=120;
 				}
 
-				ll_tab.setLayoutParams(new LinearLayout.LayoutParams(CommonMethod.dip2px(getBaseContext(), width), LinearLayout.LayoutParams.MATCH_PARENT));
+				//ll_tab.setLayoutParams(new LinearLayout.LayoutParams(CommonMethod.dip2px(getBaseContext(), width), LinearLayout.LayoutParams.MATCH_PARENT));
 				ll_content.setVisibility(View.VISIBLE);
 
 				//将登录信息保存于全局变量
@@ -342,7 +342,7 @@ public class SettingActivity extends Activity{
 				width=200;
 			}
 						
-			ll_tab.setLayoutParams(new LinearLayout.LayoutParams(CommonMethod.dip2px(getBaseContext(), width), LinearLayout.LayoutParams.MATCH_PARENT));
+			//ll_tab.setLayoutParams(new LinearLayout.LayoutParams(CommonMethod.dip2px(getBaseContext(), width), LinearLayout.LayoutParams.MATCH_PARENT));
 			ll_content.setVisibility(View.VISIBLE);
 
 			btn_show.setVisibility(View.GONE);

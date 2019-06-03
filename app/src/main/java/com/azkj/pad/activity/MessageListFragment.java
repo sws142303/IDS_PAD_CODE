@@ -28,6 +28,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.azkj.pad.model.MessageRecords;
@@ -53,7 +54,7 @@ public class MessageListFragment extends Fragment {
 	private Button btnNewMessage;
 	/************批量删除start**************/
     private ImageButton imgbtn;
-    private LinearLayout topPlan;
+    private RelativeLayout topPlan;
     private LinearLayout message_dellayout;
     private CheckBox checkAll;
     private Button btndelete;
@@ -130,7 +131,7 @@ public class MessageListFragment extends Fragment {
 		userNo = sipUser.getUsername();
 		messageList = (ListView) view.findViewById(R.id.messagelist);
 		imgbtn=(ImageButton) view.findViewById(R.id.messagedelbutton);
-		topPlan=(LinearLayout)view.findViewById(R.id.topPlan);
+		topPlan=(RelativeLayout)view.findViewById(R.id.topPlan);
 		message_dellayout=(LinearLayout)view.findViewById(R.id.messagedellayout);
         checkAll=(CheckBox)view.findViewById(R.id.checkAll);
         btndelete=(Button)view.findViewById(R.id.btndelete);

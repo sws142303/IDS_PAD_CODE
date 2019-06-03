@@ -10,7 +10,7 @@
 
     <!-- 左侧 -->
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/topPlan"
         android:layout_width="@dimen/setleft_width_liner"
         android:layout_height="wrap_content"
@@ -30,12 +30,13 @@
             android:id="@+id/imgdelete"
             android:layout_width="@dimen/setleft_deleteico_width"
             android:layout_height="@dimen/setleft_deleteico_height"
-            android:layout_marginLeft="@dimen/setleft_marginLeft"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/delete_ioc"
             android:scaleType="centerInside"
             android:src="@drawable/delete_ioc" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/delete_layout"

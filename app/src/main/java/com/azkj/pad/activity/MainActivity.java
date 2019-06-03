@@ -954,8 +954,8 @@ public class MainActivity extends TabActivity implements OnItemClickListener,
         InitView();
         InitData();
         initBaiduMap(); //百度地图开始
-        initGetCameraUVC();//获取当前设备是否存在USB摄像头
 
+        initGetCameraUVC();//获取当前设备是否存在USB摄像头
         //初始化统计丢包时延相关View
         initMediaStatistics();
 
@@ -1021,25 +1021,52 @@ public class MainActivity extends TabActivity implements OnItemClickListener,
     }
 
     //todo 判断设备是否包含UVC摄像头
+    private DisplayMetrics dm;
     private void initGetCameraUVC() {
+        dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        String content = "屏幕的分辨率为："+dm.widthPixels+"*"+dm.heightPixels;
+        Log.e("******************",""+content);
 
+        ptt_3g_PadApplication.setCameraBack(false);
+        ptt_3g_PadApplication.setCameraFront(false);
+        ptt_3g_PadApplication.setCameraUVC(false);
 
         MediaEngine.ME_VideoDeviceInfo[] videoDevices = MediaEngine.GetInstance().ME_GetVideoDevices();
         for (int i = 0; i < videoDevices.length; i++) {
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            Log.e("******************","name :" + videoDevices[i].name);
             //存在后置摄像头
             if (videoDevices[i].name.equals("Back camera")) {
-
+                Log.e("******************","后置 :" + videoDevices[i].id);
+                ptt_3g_PadApplication.setMe_videoDeviceInfo_Back(videoDevices[i]);
+                ptt_3g_PadApplication.setCameraBack(true);
             }
 
             //存在前置摄像头
             if (videoDevices[i].name.equals("Front camera")) {
-
+                Log.e("******************","前置 : " + videoDevices[i].id);
+                ptt_3g_PadApplication.setMe_videoDeviceInfo_Front(videoDevices[i]);
+                ptt_3g_PadApplication.setCameraFront(true);
             }
 
             //存在UVC摄像头
             if (videoDevices[i].name.equals("Usb camera")) {
                 ptt_3g_PadApplication.setMe_videoDeviceInfo(videoDevices[i]);
                ptt_3g_PadApplication.setCameraUVC(true);
+               Log.e("******************","USB : " + videoDevices[i].id);
+            }
+
+            //存在UVC默认启用UVC
+            if (ptt_3g_PadApplication.isCameraUVC()){
+                MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo = ptt_3g_PadApplication.getMe_videoDeviceInfo();
+                if (me_videoDeviceInfo != null){
+                    Editor editor = prefs.edit();
+                    editor.putString(GlobalConstant.ACTION_GETCAMERA, String.valueOf(me_videoDeviceInfo.id));
+                    editor.apply();
+                }
             }
         }
 
@@ -2042,7 +2069,8 @@ public class MainActivity extends TabActivity implements OnItemClickListener,
     protected void onResume() {
 
         Log.e(TAG, "Main    onResume");
-
+        String cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "2");
+        MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
 
         if (mTabHost.getCurrentTabTag() == GlobalConstant.POSITION_TAB) {
             mMapView.onResume();
@@ -9454,7 +9482,8 @@ public class MainActivity extends TabActivity implements OnItemClickListener,
     public void mtcCallDelegateTalking(int dwSessId) {
 
         //设置默认摄像头为前置还是后置  1为前置，2为后置
-        String cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "1");
+        String cameraCode = prefs.getString(GlobalConstant.ACTION_GETCAMERA, "2");
+        Log.e("摄像头","主界面" + cameraCode);
         MediaEngine.GetInstance().ME_SetDefaultVideoCaptureDevice(Integer.valueOf(cameraCode));
 
         //获取配置界面语音发送增益，默认为1 无增益

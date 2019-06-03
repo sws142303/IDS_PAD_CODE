@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:text="@string/title_setting_video_camera_rear"
+                    android:text="@string/title_setting_video_camera_USB"
                     android:textColor="@color/contact_title_unselected"
                     android:textSize="@dimen/textsize_settingActivity" />
 

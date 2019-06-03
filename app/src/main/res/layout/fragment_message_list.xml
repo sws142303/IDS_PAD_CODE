@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!-- 左侧 -->
-    <LinearLayout 
+    <RelativeLayout
        android:id="@+id/topPlan"
        android:layout_width="@dimen/setleft_width_liner"
        android:layout_height="wrap_content"
@@ -26,10 +26,11 @@
             android:scaleType="centerInside"
             android:src="@drawable/delete_ioc"
             android:background="@drawable/delete_ioc"
-            android:layout_marginLeft="@dimen/setleft_marginLeft" 
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
             android:layout_marginTop="2dp"/>
 
-    </LinearLayout>
+    </RelativeLayout>
     <LinearLayout 
        android:id="@+id/messagedellayout"
       android:layout_width="@dimen/setleft_width_liner"

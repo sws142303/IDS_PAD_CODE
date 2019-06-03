@@ -69,8 +69,13 @@ public class PTT_3G_PadApplication extends Application {
 	private boolean isCameraBack = false;
 	//设备支持的摄像头是否有UVC
 	private boolean isCameraUVC = false;
+
+	//前置摄像头
+	private MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo_Front;
+	//后置摄像头
+	private MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo_Back;
 	//当前UVC对象实体Bean
-	private MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo;
+	private MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo_UVC;
 	//标识公司名称
 	private String companyName = null;
 	//标识公司电话
@@ -387,36 +392,43 @@ public class PTT_3G_PadApplication extends Application {
 		//InstantClient.instance(this.getApplicationContext()).create();//
 		
 		//设置摄像头角度
-		SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(PTT_3G_PadApplication.sContext);
-		String[] mVideoRotateArray= this.getResources().getStringArray(R.array.video_rotate);
-		String rotate = prefs.getString(GlobalConstant.SP_VIDEO_ROTATE, mVideoRotateArray[0]);//
-		Camera.CameraInfo cameraInfo;
-        int iCameraNumbers = Camera.getNumberOfCameras();
-        for (int cameraId = 0; cameraId < iCameraNumbers; cameraId++) {
-            cameraInfo = new Camera.CameraInfo();
-            Camera.getCameraInfo(cameraId, cameraInfo);
-            if(cameraInfo.facing == cameraInfo.CAMERA_FACING_BACK)
-            {
-            	isCameraBack = true;
-            }            
-            else 
-            {
-            	isCameraFront = true;
-            }
-            cameraInfo.orientation = 0;
-            if (rotate.equals(mVideoRotateArray[0])){
-            	cameraInfo.orientation = 0;
-            }else if(rotate.equals(mVideoRotateArray[1])){
-            	cameraInfo.orientation = 90;
-            }else if(rotate.equals(mVideoRotateArray[2])){
-            	cameraInfo.orientation = 180;
-            }else if(rotate.equals(mVideoRotateArray[3])){
-            	cameraInfo.orientation = 270;
-            }
-           // com.juphoon.Environment.overrideCameraInfo(cameraId, cameraInfo);
-        }
+		try{
+			SharedPreferences prefs= PreferenceManager.getDefaultSharedPreferences(PTT_3G_PadApplication.sContext);
+			String[] mVideoRotateArray= this.getResources().getStringArray(R.array.video_rotate);
+			String rotate = prefs.getString(GlobalConstant.SP_VIDEO_ROTATE, mVideoRotateArray[0]);//
+			Camera.CameraInfo cameraInfo;
+			int iCameraNumbers = Camera.getNumberOfCameras();
+			for (int cameraId = 0; cameraId < iCameraNumbers; cameraId++) {
+				cameraInfo = new Camera.CameraInfo();
+				Camera.getCameraInfo(cameraId, cameraInfo);
+				if(cameraInfo.facing == cameraInfo.CAMERA_FACING_BACK)
+				{
+					setCameraBack(true);
+				}
+				else
+				{
+					setCameraFront(true);
+				}
+				cameraInfo.orientation = 0;
+				if (rotate.equals(mVideoRotateArray[0])){
+					cameraInfo.orientation = 0;
+				}else if(rotate.equals(mVideoRotateArray[1])){
+					cameraInfo.orientation = 90;
+				}else if(rotate.equals(mVideoRotateArray[2])){
+					cameraInfo.orientation = 180;
+				}else if(rotate.equals(mVideoRotateArray[3])){
+					cameraInfo.orientation = 270;
+				}
+				// com.juphoon.Environment.overrideCameraInfo(cameraId, cameraInfo);
+			}
+
+			mLocationClient = new LocationClient(getApplicationContext());     //声明LocationClient类
+		}catch (Exception e){
+
+		}
+
 		       
-        mLocationClient = new LocationClient(getApplicationContext());     //声明LocationClient类
+
        
         try
 		{					
@@ -711,10 +723,34 @@ public class PTT_3G_PadApplication extends Application {
 	}
 
 	public MediaEngine.ME_VideoDeviceInfo getMe_videoDeviceInfo() {
-		return me_videoDeviceInfo;
+		return me_videoDeviceInfo_UVC;
 	}
 
-	public void setMe_videoDeviceInfo(MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo) {
-		this.me_videoDeviceInfo = me_videoDeviceInfo;
+	public void setMe_videoDeviceInfo(MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo_UVC) {
+		this.me_videoDeviceInfo_UVC = me_videoDeviceInfo_UVC;
+	}
+
+	public void setCameraFront(boolean cameraFront) {
+		isCameraFront = cameraFront;
+	}
+
+	public void setCameraBack(boolean cameraBack) {
+		isCameraBack = cameraBack;
+	}
+
+	public MediaEngine.ME_VideoDeviceInfo getMe_videoDeviceInfo_Back() {
+		return me_videoDeviceInfo_Back;
+	}
+
+	public void setMe_videoDeviceInfo_Back(MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo_Back) {
+		this.me_videoDeviceInfo_Back = me_videoDeviceInfo_Back;
+	}
+
+	public MediaEngine.ME_VideoDeviceInfo getMe_videoDeviceInfo_Front() {
+		return me_videoDeviceInfo_Front;
+	}
+
+	public void setMe_videoDeviceInfo_Front(MediaEngine.ME_VideoDeviceInfo me_videoDeviceInfo_Front) {
+		this.me_videoDeviceInfo_Front = me_videoDeviceInfo_Front;
 	}
 }
